@@ -2,7 +2,126 @@
 
 @section('content')
 
-    <h1>{{ $title }}</h1>
-    <p>This is the weather station located in Belgrave</p>
+    @if ($currentlist['temperature'] <= 0)
+        <?php $style = 'table-light';
+        $bg_style = 'table-info'; ?>
+
+    @elseif ($currentlist['temperature'] <= 6)
+        <?php $style = 'table-info';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] <= 12)
+        <?php $style = 'table-primary';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] <= 17)
+        <?php $style = 'table-secondary';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] <= 30)
+        <?php $style = 'table-success text-white';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] <= 36)
+        <?php $style = 'table-warning';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] < 42)
+        <?php $style = 'table-danger';
+        $bg_style = ''; ?>
+
+    @elseif ($currentlist['temperature'] >= 42)
+        <?php $style = 'table-dark';
+        $bg_style = ''; ?>
+
+    @endif
+
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2>current conditions</h2>
+        <table class="table table-sm table-dark">
+            <tr>
+                <td class="{{ $style }}">temperature: {{ $currentlist['temperature'] }}</td>
+                <td>humidity: {{ $currentlist['humidity'] }}</td>
+                <td>feels like: {{ $currentlist['feelslike'] }}</td>
+                <td>barometer: {{ $currentlist['baro'] }}</td>
+            </tr>
+            <tr>
+                <td>average wind: {{ $currentlist['avgspd'] }}</td>
+                <td>wind gust: {{ $currentlist['gstspd'] }}</td>
+                <td>wind dir: {{ $currentlist['dirdeg'] . " " . $currentlist['dirlabel'] }}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>rain today: {{ $currentlist['dayrn'] }}</td>
+                <td>uv: {{ $currentlist['VPuv'] }}</td>
+                <td>burn time: {{ $currentlist['burntime'] }}</td>
+                <td>next update: {{ $currentlist['timeofnextupdate'] }}</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <h2>forecast</h2>
+
+    <table class="table table-sm table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>date</th>
+                <th>condition</th>
+                <th>max</th>
+                <th>min</th>
+                <th>rain probability</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for ($i = 0; $i < 10; $i++)
+                <?php
+                    $day_num = 'day_num'.$i;
+                    $month_num = 'month_num'.$i;
+                    $conditions = 'conditions'.$i;
+                    $air_temp_high = 'air_temp_high'.$i;
+                    $air_temp_low = 'air_temp_low'.$i;
+                    $precip_probability = 'precip_probability'.$i;
+                ?>
+                <tr>
+                    <th>{{ $$day_num }}/{{ $$month_num }}</td>
+                    <td>{{ $$conditions }}</td>
+                    <td>{{ $$air_temp_high }}</td>
+                    <td>{{ $$air_temp_low }}</td>
+                    <td>{{ $$precip_probability }}</td>
+                </tr>
+            @endfor
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <h2>last 7 days comparison</h2>
+</div>
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <h2>rain radar</h2>
+    <div class="modal-body" id="modal-body">
+        <iframe width="640" height="640" src="https://embed.windy.com/embed2.html?lat=-37.900&lon=145.350&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=6&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+        <iframe width="640" height="640" src="https://embed.windy.com/embed2.html?lat=-25.635&lon=134.140&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=4&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+    </iframe>
+</div>
+    <code></code>
+</div>
+
+
+
+
+
+
+
+
+
 
 @endsection

@@ -23,10 +23,10 @@
 
 
     <body>
-        @include('inc.current')
+        <!-- @include('inc.current') -->
         @include('inc.navbar')
 
-        <div class="container">
+        <div class="container-fluid no-gutters">
             @yield('content')
         </div>
 

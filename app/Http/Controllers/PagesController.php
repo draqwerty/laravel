@@ -15,7 +15,97 @@ class PagesController extends Controller
 
         $currentlist = $current->getCurrentList();
 
-        return view('pages.index', compact('currentlist','title'));
+
+
+        $response = Http::get('https://swd.weatherflow.com/swd/rest/better_forecast?station_id=35990&token=e30894fa-1a63-4b9a-8408-82008e2bc3b5&lat=-37.90115&lon=145.35545');
+        $response = json_decode($response->getBody(), true);
+
+        $wfforecast = [
+           'day_num0' => $response['forecast']['daily'][0]['day_num'],
+           'month_num0' => $response['forecast']['daily'][0]['month_num'],
+           'conditions0' => $response['forecast']['daily'][0]['conditions'],
+           'icon0' => $response['forecast']['daily'][0]['icon'],
+           'air_temp_high0' => $response['forecast']['daily'][0]['air_temp_high'],
+           'air_temp_low0' => $response['forecast']['daily'][0]['air_temp_low'],
+           'precip_probability0' => $response['forecast']['daily'][0]['precip_probability'],
+
+           'day_num1' => $response['forecast']['daily'][1]['day_num'],
+           'month_num1' => $response['forecast']['daily'][1]['month_num'],
+           'conditions1' => $response['forecast']['daily'][1]['conditions'],
+           'icon1' => $response['forecast']['daily'][1]['icon'],
+           'air_temp_high1' => $response['forecast']['daily'][1]['air_temp_high'],
+           'air_temp_low1' => $response['forecast']['daily'][1]['air_temp_low'],
+           'precip_probability1' => $response['forecast']['daily'][1]['precip_probability'],
+
+           'day_num2' => $response['forecast']['daily'][2]['day_num'],
+           'month_num2' => $response['forecast']['daily'][2]['month_num'],
+           'conditions2' => $response['forecast']['daily'][2]['conditions'],
+           'icon2' => $response['forecast']['daily'][2]['icon'],
+           'air_temp_high2' => $response['forecast']['daily'][2]['air_temp_high'],
+           'air_temp_low2' => $response['forecast']['daily'][2]['air_temp_low'],
+           'precip_probability2' => $response['forecast']['daily'][2]['precip_probability'],
+
+           'day_num3' => $response['forecast']['daily'][3]['day_num'],
+           'month_num3' => $response['forecast']['daily'][3]['month_num'],
+           'conditions3' => $response['forecast']['daily'][3]['conditions'],
+           'icon3' => $response['forecast']['daily'][3]['icon'],
+           'air_temp_high3' => $response['forecast']['daily'][3]['air_temp_high'],
+           'air_temp_low3' => $response['forecast']['daily'][3]['air_temp_low'],
+           'precip_probability3' => $response['forecast']['daily'][3]['precip_probability'],
+
+           'day_num4' => $response['forecast']['daily'][4]['day_num'],
+           'month_num4' => $response['forecast']['daily'][4]['month_num'],
+           'conditions4' => $response['forecast']['daily'][4]['conditions'],
+           'icon4' => $response['forecast']['daily'][4]['icon'],
+           'air_temp_high4' => $response['forecast']['daily'][4]['air_temp_high'],
+           'air_temp_low4' => $response['forecast']['daily'][4]['air_temp_low'],
+           'precip_probability4' => $response['forecast']['daily'][4]['precip_probability'],
+
+           'day_num5' => $response['forecast']['daily'][5]['day_num'],
+           'month_num5' => $response['forecast']['daily'][5]['month_num'],
+           'conditions5' => $response['forecast']['daily'][5]['conditions'],
+           'icon5' => $response['forecast']['daily'][5]['icon'],
+           'air_temp_high5' => $response['forecast']['daily'][5]['air_temp_high'],
+           'air_temp_low5' => $response['forecast']['daily'][5]['air_temp_low'],
+           'precip_probability5' => $response['forecast']['daily'][5]['precip_probability'],
+
+           'day_num6' => $response['forecast']['daily'][6]['day_num'],
+           'month_num6' => $response['forecast']['daily'][6]['month_num'],
+           'conditions6' => $response['forecast']['daily'][6]['conditions'],
+           'icon6' => $response['forecast']['daily'][6]['icon'],
+           'air_temp_high6' => $response['forecast']['daily'][6]['air_temp_high'],
+           'air_temp_low6' => $response['forecast']['daily'][6]['air_temp_low'],
+           'precip_probability6' => $response['forecast']['daily'][6]['precip_probability'],
+
+           'day_num7' => $response['forecast']['daily'][7]['day_num'],
+           'month_num7' => $response['forecast']['daily'][7]['month_num'],
+           'conditions7' => $response['forecast']['daily'][7]['conditions'],
+           'icon7' => $response['forecast']['daily'][7]['icon'],
+           'air_temp_high7' => $response['forecast']['daily'][7]['air_temp_high'],
+           'air_temp_low7' => $response['forecast']['daily'][7]['air_temp_low'],
+           'precip_probability7' => $response['forecast']['daily'][7]['precip_probability'],
+
+           'day_num8' => $response['forecast']['daily'][8]['day_num'],
+           'month_num8' => $response['forecast']['daily'][8]['month_num'],
+           'conditions8' => $response['forecast']['daily'][8]['conditions'],
+           'icon8' => $response['forecast']['daily'][8]['icon'],
+           'air_temp_high8' => $response['forecast']['daily'][8]['air_temp_high'],
+           'air_temp_low8' => $response['forecast']['daily'][8]['air_temp_low'],
+           'precip_probability8' => $response['forecast']['daily'][8]['precip_probability'],
+
+           'day_num9' => $response['forecast']['daily'][9]['day_num'],
+           'month_num9' => $response['forecast']['daily'][9]['month_num'],
+           'conditions9' => $response['forecast']['daily'][9]['conditions'],
+           'icon9' => $response['forecast']['daily'][9]['icon'],
+           'air_temp_high9' => $response['forecast']['daily'][9]['air_temp_high'],
+           'air_temp_low9' => $response['forecast']['daily'][9]['air_temp_low'],
+           'precip_probability9' => $response['forecast']['daily'][9]['precip_probability'],
+
+       ];
+
+
+        return view('pages.index')->with(compact('currentlist','title'))
+                    ->with($wfforecast);
     }
 
     public function current()
@@ -74,6 +164,7 @@ class PagesController extends Controller
         return view('pages.wfextract')->with(compact('currentlist','title'))
                                       ->with($wfdata);
     }
+
 
     public function graphMtd(CurrentRepository $current)
     {
