@@ -2,6 +2,7 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
+require 'recipe/rsync.php';
 
 // Project name
 set('application', 'IMELBO2077');
@@ -19,6 +20,29 @@ add('shared_dirs', []);
 // Writable dirs by web server
 add('writable_dirs', []);
 set('allow_anonymous_stats', false);
+
+set('ssh_multiplexing', true);
+
+set('rsync_src', function () {
+    return __DIR__;
+});
+
+add('rsync', [
+    'exclude' => [
+        '.git',
+        '/.env',
+        '/storage/',
+        '/vendor/',
+        '/node_modules/',
+        '.github',
+        'deploy.php',
+    ],
+]);
+
+task('deploy:secrets', function () {
+    file_put_contents(__DIR__ . '/.env', getenv('DOT_ENV'));
+    upload('.env', get('deploy_path') . '/shared');
+});
 
 // Hosts
 
