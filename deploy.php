@@ -20,8 +20,9 @@ add('shared_dirs', []);
 // Writable dirs by web server
 add('writable_dirs', []);
 set('allow_anonymous_stats', false);
+set('http_user', 'www-data');
 
-//set('ssh_multiplexing', true);
+set('ssh_multiplexing', true);
 
 set('rsync_src', function () {
     return __DIR__;
