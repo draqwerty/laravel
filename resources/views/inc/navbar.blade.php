@@ -23,6 +23,16 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+      <li class="nav-item dropdown {{ (request()->is('reports/*')) ? 'active' : '' }}">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          reports
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">forecast</a>
+          <a class="dropdown-item disabled" aria-disabled="true" href="#">noaa</a>
+          <a class="dropdown-item" href="#">metar</a>
+        </div>
+      </li>
       <li class="nav-item {{ (request()->is('moon')) ? 'active' : '' }}">
         <a class="nav-link" href="/moon">moon</a>
       </li>
