@@ -38,6 +38,7 @@ jobs:
         with:
           name: assets
           path: public
+
   build-js-staging:
     name: Build JavaScript/CSS for STAGING Server
     runs-on: ubuntu-latest
@@ -54,6 +55,7 @@ jobs:
         with:
           name: assets
           path: public
+
   deploy-production:
     name: Deploy Project to PRODUCTION Server
     runs-on: ubuntu-latest
@@ -82,6 +84,7 @@ jobs:
         env:
           DOT_ENV: ${{ secrets.DOT_ENV_PRODUCTION }}
         run: dep deploy production --tag=${{ env.GITHUB_REF }} -vvv
+
   deploy-staging:
     name: Deploy Project to STAGING Server
     runs-on: ubuntu-latest
