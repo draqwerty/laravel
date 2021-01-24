@@ -129,7 +129,7 @@ $heatcolourword =  'Cool';	// How hot/cold it feels at the moment, based on the 
 // ====================
 // Current:
 // --------
-$temperature =  '18';	// temperature
+$temperature =  '44';	// temperature
 $tempnodp = '13'; // temperature, no decimal place
 $humidity =  '65';	// humidity
 $dewpt =  '6.4';	// dew point

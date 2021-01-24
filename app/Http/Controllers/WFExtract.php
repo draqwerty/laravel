@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 use App\Http\Repository\CurrentRepository;
+use Jenssegers\Agent\Agent;
 
 class WFExtract extends Controller
 {

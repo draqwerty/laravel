@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Repository\CurrentRepository;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
+use Jenssegers\Agent\Agent;
 
 class PagesController extends Controller
 {
@@ -14,8 +15,6 @@ class PagesController extends Controller
         $title = 'Here';
 
         $currentlist = $current->getCurrentList();
-
-
 
         $response = Http::get('https://swd.weatherflow.com/swd/rest/better_forecast?station_id=35990&token=e30894fa-1a63-4b9a-8408-82008e2bc3b5&lat=-37.90115&lon=145.35545');
         $response = json_decode($response->getBody(), true);
@@ -102,7 +101,6 @@ class PagesController extends Controller
            'precip_probability9' => $response['forecast']['daily'][9]['precip_probability'],
 
        ];
-
 
         return view('pages.index')->with(compact('currentlist','title'))
                     ->with($wfforecast);

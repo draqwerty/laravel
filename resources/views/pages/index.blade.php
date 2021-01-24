@@ -19,7 +19,7 @@
         $bg_style = ''; ?>
 
     @elseif ($currentlist['temperature'] <= 30)
-        <?php $style = 'table-success text-white';
+        <?php $style = 'table-success';
         $bg_style = ''; ?>
 
     @elseif ($currentlist['temperature'] <= 36)
@@ -36,11 +36,13 @@
 
     @endif
 
-    <div class="shadow p-3 mb-5 bg-white rounded">
+    <br />
+
+    <div class="shadow p-3 mb-5 rounded px-5">
         <h2>current conditions</h2>
-        <table class="table table-sm table-dark">
+        <table class="table table-sm {{ $style }}">
             <tr>
-                <td class="{{ $style }}">temperature: {{ $currentlist['temperature'] }}</td>
+                <td>temperature: {{ $currentlist['temperature'] }}</td>
                 <td>humidity: {{ $currentlist['humidity'] }}</td>
                 <td>feels like: {{ $currentlist['feelslike'] }}</td>
                 <td>barometer: {{ $currentlist['baro'] }}</td>
@@ -49,7 +51,7 @@
                 <td>average wind: {{ $currentlist['avgspd'] }}</td>
                 <td>wind gust: {{ $currentlist['gstspd'] }}</td>
                 <td>wind dir: {{ $currentlist['dirdeg'] . " " . $currentlist['dirlabel'] }}</td>
-                <td></td>
+                <td>lightning last 5min: {{ $currentlist['lighteningcountlast5minutes'] }}</td>
             </tr>
             <tr>
                 <td>rain today: {{ $currentlist['dayrn'] }}</td>
@@ -63,7 +65,7 @@
 
     </div>
 
-<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="shadow p-3 mb-5 bg-white rounded px-5">
     <h2>forecast</h2>
 
     <table class="table table-sm table-hover">
@@ -101,16 +103,28 @@
 
 
 
-<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="shadow p-3 mb-5 bg-white rounded px-5">
     <h2>last 7 days comparison</h2>
 </div>
 
 <div class="shadow p-3 mb-5 bg-white rounded">
     <h2>rain radar</h2>
-    <div class="modal-body" id="modal-body">
-        <iframe width="640" height="640" src="https://embed.windy.com/embed2.html?lat=-37.900&lon=145.350&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=6&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-        <iframe width="640" height="640" src="https://embed.windy.com/embed2.html?lat=-25.635&lon=134.140&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=4&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-    </iframe>
+
+        @if ($agent->isMobile())
+            <div class="modal-body" id="modal-body">
+                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-38.211&lon=145.190&detailLat=-27.145&detailLon=133.877&width=419&height=420&zoom=5&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-27.376&lon=135.794&detailLat=-27.145&detailLon=133.877&width=419&height=420&zoom=3&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+            </div>
+        @else
+            <div class="modal-body" id="modal-body">
+                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-37.900&lon=145.350&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=6&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-25.635&lon=134.140&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=4&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+            </div>
+        @endif
+
+
 </div>
     <code></code>
 </div>
