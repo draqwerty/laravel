@@ -22,13 +22,13 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('weather.sandintheface.com')
+host('production')
   ->hostname('119.18.27.84')
   ->stage('production')
   ->user('root')
   ->set('deploy_path', '/var/www/html');
 
-host('weather.sandintheface.com')
+host('staging')
   ->hostname('119.18.27.84')
   ->stage('staging')
   ->user('root')
