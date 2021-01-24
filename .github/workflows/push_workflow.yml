@@ -21,8 +21,7 @@ jobs:
         run: php artisan key:generate
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
-      - name: Execute tests (Unit and Feature tests) via JEST
-        run: node_modules/.bin/jest
+
   build-js-production:
     name: Build JavaScript/CSS for PRODUCTION Server
     runs-on: ubuntu-latest

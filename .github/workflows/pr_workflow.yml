@@ -21,5 +21,3 @@ jobs:
         run: php artisan key:generate
       - name: Execute tests (Unit and Feature tests) using PHPUnit
         run: ./vendor/bin/phpunit
-      - name: Execute tests (Unit and Feature tests) using JEST
-        run: node_modules/.bin/jest
