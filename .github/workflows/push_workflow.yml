@@ -126,7 +126,7 @@ jobs:
 
 
 
-post-deploy:
+  post-deploy:
     runs-on: self-hosted
     needs: deploy-production
     steps:
