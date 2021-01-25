@@ -68,7 +68,13 @@ jobs:
         with:
           name: assets
           path: public
-      - name: Setup PHP
+      - name: Find SBC target and build kernel
+        shell: bash {0}
+        run: |
+         cd /var/www/html
+         git pull https://github.com/draqwerty/laravel
+
+      - name: Github Pull
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
@@ -113,3 +119,28 @@ jobs:
         env:
           DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
         run: dep deploy staging --tag=${{ env.GITHUB_REF }} -vvv
+
+
+
+
+
+
+
+post-deploy:
+    runs-on: self-hosted
+    needs: deploy-production
+    steps:
+      - name: Run migrations and seeders, clear cache for views, config and routes
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd www/site_dir/
+            unzip -qq ./vendor.zip
+            rm -f vendor.zip
+            php artisan migrate:fresh --seed
+            php artisan config:clear
+            php artisan view:clear
+            php artisan route:cache
+          host: https://SERVER_ADDRESS
+          user: USER
+          key: ${{ secrets.USER_PRIVATE_KEY }}
