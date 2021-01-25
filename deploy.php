@@ -20,7 +20,7 @@ add('shared_dirs', []);
 // Writable dirs by web server
 add('writable_dirs', []);
 set('allow_anonymous_stats', false);
-set('http_user', 'www-data');
+set('http_user', 'devuser');
 
 set('ssh_multiplexing', true);
 

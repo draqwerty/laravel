@@ -72,7 +72,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
-          extension-csv: mbstring, bcmath
+          extensions: mbstring, bcmath
       - name: Composer install
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
@@ -101,7 +101,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
-          extension-csv: mbstring, bcmath
+          extensions: mbstring, bcmath
       - name: Composer install
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Setup Deployer
@@ -109,7 +109,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-      - name: Deploy to Prod
+      - name: Deploy to Staging
         env:
           DOT_ENV: ${{ secrets.DOT_ENV_STAGING }}
         run: dep deploy staging --tag=${{ env.GITHUB_REF }} -vvv
