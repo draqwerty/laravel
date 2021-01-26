@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ config('APP_URL', 'https://weather.sandintheface.com') }}/css/app.css}}" rel="stylesheet">
+    <link href="{{ config('APP_URL', 'https://weather.sandintheface.com') }}/css/app.css" rel="stylesheet">
 </head>
 
     <body>
