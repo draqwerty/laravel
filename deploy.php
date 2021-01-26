@@ -158,7 +158,7 @@ task('rollback', function () {
 });
 
 task('deploy', [
-    'confirm',
+//    'confirm',
     'create:release',
     'update:code',
     'create:symlinks',
