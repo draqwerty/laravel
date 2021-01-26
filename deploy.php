@@ -2,7 +2,32 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
-require 'recipe/rsync.php';
+//require 'recipe/rsync.php';
+
+// Hosts
+
+host('production')
+    ->hostname('119.18.27.84')
+    ->stage('production')
+    ->user('deployer')
+    ->identityFile('~/.ssh/id_rsa')
+    ->set('deploy_path', '/var/www/html/weather')
+    ->set('branch', 'master');
+
+host('staging')
+    ->hostname('119.18.27.84')
+    ->stage('staging')
+    ->user('deployer')
+    ->identityFile('~/.ssh/id_rsa')
+    ->set('deploy_path', '/var/www/html/weather-staging')
+    ->set('branch', 'master');
+
+
+set('releases_list', function () {
+    return explode("\n", run('ls -dt {{deploy_path}}/releases/*'));
+});
+
+set('keep_releases', 5);
 
 // Project name
 set('application', 'IMELBO2077');
@@ -10,85 +35,141 @@ set('application', 'IMELBO2077');
 // Project repository
 set('repository', 'https://github.com/draqwerty/laravel');
 
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
 
-// Shared files/dirs between deploys
-add('shared_files', []);
-add('shared_dirs', []);
 
-// Writable dirs by web server
-add('writable_dirs', []);
-set('allow_anonymous_stats', false);
-set('http_user', 'devuser');
+task('create:release', function () {
+    $i = 0;
 
-set('ssh_multiplexing', true);
+    do {
+        $releasePath = '{{deploy_path}}/releases/' . date('m_d_H_i_') . $i++;
+    } while (run("if [ -d $releasePath ]; then echo exists; fi;") == 'exists');
 
-set('rsync_src', function () {
-    return __DIR__;
+    run("mkdir $releasePath");
+    set('release_path', $releasePath);
+
+    writeln("Release path: $releasePath");
 });
 
-add('rsync', [
-    'exclude' => [
-        '.git',
-        '/.env',
-        '/storage/',
-        '/vendor/',
-        '/node_modules/',
-        '.github',
-        'deploy.php',
-    ],
-]);
 
-task('deploy:secrets', function () {
-    file_put_contents(__DIR__ . '/.env', getenv('DOT_ENV'));
-    upload('.env', get('deploy_path') . '/shared');
+task('update:code', function () {
+    run("git clone -b {{branch}} -q --depth 1 {{repository}} {{release_path}}");
 });
 
-// Hosts
+task('create:symlinks', function () {
+    // Link .env.
+    run("ln -nfs {{deploy_path}}/static/.env {{release_path}}");
 
-host('production')
-  ->hostname('119.18.27.84')
-  ->stage('production')
-  ->user('root')
-  ->set('deploy_path', '/var/www/html');
+    // Link storage.
+    run("ln -nfs {{deploy_path}}/static/storage {{release_path}}");
 
-host('staging')
-  ->hostname('119.18.27.84')
-  ->stage('staging')
-  ->user('root')
-  ->set('deploy_path', '/var/www/weather-staging');
-// Tasks
-
-task('build', function () {
-    run('cd {{release_path}} && build');
+    // Link vendor.
+    run("ln -nfs {{deploy_path}}/static/vendor {{release_path}}");
 });
 
-// [Optional] if deploy fails automatically unlock.
-after('deploy:failed', 'deploy:unlock');
+task('update:vendors', function () {
+    cd('{{release_path}}');
+    writeln('<info>  Updating npm</info>');
+    run('npm-cache install npm --no-dev');
 
-// Migrate database before symlink new release.
+    writeln('<info>  Updating composer</info>');
+    run('composer install --no-dev');
+});
 
-//before('deploy:symlink', 'artisan:migrate');
+task('update:permissions', function () {
+    run('chmod -R a+w {{release_path}}/bootstrap/cache');
+    run('chown -R {{user}}:{{user}} {{release_path}} -h');
+});
 
-desc('Deploy the application');
+task('compile:assets', function () {
+    cd('{{release_path}}');
+    run('npm run prod');
+    run('rm -rf {{release_path}}/node_modules');
+});
+
+task('optimize', function () {
+    run('php {{release_path}}/artisan cache:clear');
+    run('php {{release_path}}/artisan view:clear');
+    run('php {{release_path}}/artisan config:clear');
+    run('php {{release_path}}/artisan config:cache');
+});
+
+task('site:down', function () {
+    writeln(sprintf('<info>%s</info>', run('php {{release_path}}/artisan down')));
+});
+
+task('migrate:db', function () {
+    writeln(sprintf('  <info>%s</info>', run('php {{release_path}}/artisan migrate --force --no-interaction')));
+});
+
+task('update:release_symlink', function () {
+    run('cd {{deploy_path}} && if [ -e live ]; then rm live; fi');
+    run('cd {{deploy_path}} && if [ -h live ]; then rm live; fi');
+
+    run('ln -nfs {{release_path}} {{deploy_path}}/live');
+});
+
+task('site:up', function () {
+    writeln(sprintf('  <info>%s</info>', run('php {{deploy_path}}/live/artisan up')));
+});
+
+task('clear:opcache', function(){
+    run('cachetool opcache:reset --fcgi=/var/run/php/php7.2-fpm.sock');
+});
+
+task('cleanup', function () {
+    $releases = get('releases_list');
+    $keep = get('keep_releases');
+
+    while ($keep-- > 0) {
+        array_shift($releases);
+    }
+
+    foreach ($releases as $release) {
+        run("rm -rf $release");
+    }
+});
+
+task('notify:done', function () use ($startTime) {
+    $seconds = intval(microtime(true) - $startTime);
+    $minutes = substr('0' . intval($seconds / 60), -2);
+    $seconds %= 60;
+    $seconds = substr('0' . $seconds, -2);
+
+    shell_exec("osascript -e 'display notification \"It took: $minutes:$seconds\" with title \"Deploy Finished\"'");
+    shell_exec('say deployment finished');
+});
+
+task('rollback', function () {
+    $releases = get('releases_list');
+
+    if (isset($releases[1])) {
+        writeln(sprintf('<error>%s</error>', run('php {{deploy_path}}/live/artisan down')));
+
+        $releaseDir = $releases[1];
+        run("ln -nfs $releaseDir {{deploy_path}}/live");
+        run("rm -rf {$releases[0]}");
+
+        writeln("Rollback to `{$releases[1]}` release was successful.");
+        writeln(sprintf('  <error>%s</error>', run("php {{deploy_path}}/live/artisan up")));
+    } else {
+        writeln('  <comment>No more releases you can revert to.</comment>');
+    }
+});
 
 task('deploy', [
-    'deploy:info',
-    'deploy:prepare',
-    'deploy:lock',
-    'deploy:release',
-    'rsync',
-    'deploy:secrets',
-    'deploy:shared',
-    'deploy:vendors',
-//    'deploy:writable',
-    'artisan:storage:link',
-    'artisan:view:cache',
-    'artisan:config:cache',
-//    'artisan:migrate',
-//    'artisan:queue:restart',
-    'deploy:symlink',
-    'deploy:unlock',
+    'confirm',
+    'create:release',
+    'update:code',
+    'create:symlinks',
+    'update:vendors',
+    'update:permissions',
+    'compile:assets',
+    'optimize',
+    'site:down',
+    'migrate:db',
+    'update:release_symlink',
+    'site:up',
+    //'clear:opcache',
     'cleanup',
+    'notify:done'
 ]);
