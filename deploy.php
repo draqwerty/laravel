@@ -39,13 +39,9 @@ add('rsync', [
     ],
 ]);
 
-task('deploy:secrets', function () {
-    file_put_contents(__DIR__ . '/.env', getenv('DOT_ENV'));
-    upload('.env', get('deploy_path') . '/shared');
-});
+
 
 // Hosts
-
 host('production')
   ->hostname('119.18.27.84')
   ->stage('production')
@@ -57,17 +53,25 @@ host('staging')
   ->stage('staging')
   ->user('root')
   ->set('deploy_path', '/var/www/weather-staging');
-// Tasks
 
+// Tasks
 task('build', function () {
     run('cd {{release_path}} && build');
+});
+
+task('wdisplay', function () {
+    run('ln -nfs --relative /var/www/html/wdisplay {{release_path}}/public/wdisplay');
+});
+
+task('deploy:secrets', function () {
+    file_put_contents(__DIR__ . '/.env', getenv('DOT_ENV'));
+    upload('.env', get('deploy_path') . '/shared');
 });
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
-
 //before('deploy:symlink', 'artisan:migrate');
 
 desc('Deploy the application');
@@ -88,6 +92,7 @@ task('deploy', [
     //'artisan:migrate',
     //'artisan:queue:restart',
     'deploy:symlink',
+    'wdisplay',
     'deploy:unlock',
     'cleanup',
 ]);
