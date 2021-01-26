@@ -15,6 +15,8 @@
 /*
   1.07 includes support for:
 
+
+
 WebsterWeather:  http://www.websterweatherlive.com/wxScripts.php
   Alt-Dashboard 4.xx Script (Pre-Rainer's JavaScript) 	V4.30 	18-FEB-2011
   Alt-Dashboard 5.xx Script 	V5.20 	18-FEB-2011
