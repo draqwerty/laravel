@@ -7,7 +7,7 @@ class CurrentRepository
 {
     public function getCurrentList()
     {
-        include(app_path() . '/../public/wdisplay/wdtags.php');
+        include(app_path() . '/../../wdisplay/wdtags.php');
 
         return [
             'temperature' => $temperature,
