@@ -21,7 +21,6 @@
     <link href="{{ config('APP_URL', 'https://weather.sandintheface.com') }}/css/app.css}}" rel="stylesheet">
 </head>
 
-
     <body>
         <!-- @include('inc.current') -->
         @include('inc.navbar')
