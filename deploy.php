@@ -5,6 +5,7 @@ require 'recipe/laravel.php';
 //require 'recipe/rsync.php';
 
 // Hosts
+$startTime = microtime(true);
 
 host('production')
     ->hostname('119.18.27.84')
