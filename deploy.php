@@ -4,14 +4,16 @@ namespace Deployer;
 require 'recipe/laravel.php';
 require 'recipe/rsync.php';
 
-// Project name
-set('application', 'IMELBO2077');
 
-// Project repository
+set('application', 'IMELBO2077');
+set('ssh_multiplexing', true);
 set('repository', 'https://github.com/draqwerty/laravel');
 
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+
+set('rsync_src', function () {
+    return __DIR__;
+});
+
 
 // Shared files/dirs between deploys
 add('shared_files', []);
@@ -22,11 +24,8 @@ add('writable_dirs', []);
 set('allow_anonymous_stats', false);
 set('http_user', 'devuser');
 
-set('ssh_multiplexing', true);
+set('writable_mode', 'chmod');
 
-set('rsync_src', function () {
-    return __DIR__;
-});
 
 add('rsync', [
     'exclude' => [
