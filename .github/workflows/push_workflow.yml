@@ -25,7 +25,7 @@ jobs:
           FILE_NAME: "public/wdtags/wdtags.php"
           FILE_DATA: ${{ secrets.WDTAGS }}
       - name: Fix CurrentRepository to allow for test to work
-        run: sed "+s$_SERVER['DOCUMENT_ROOT'].'+'/home/runner/work/laravel/laravel/public+g" /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
+        run: sed "s+$_SERVER['DOCUMENT_ROOT'].'+'/home/runner/work/laravel/laravel/public+g" /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Install Composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Install NPM Dependencies
