@@ -14,7 +14,7 @@ jobs:
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Create wdisplay folder
-        run: mkdir -p public/wdtags
+        run: mkdir -p /home/runner/work/laravel/laravel/public/wdtags
       - name: Create storage folder
         run: rm -rf storage && mkdir -p storage storage/framework
       - name: Create folders within framework folders
@@ -24,6 +24,8 @@ jobs:
         env:
           FILE_NAME: "public/wdtags/wdtags.php"
           FILE_DATA: ${{ secrets.WDTAGS }}
+      - name: Fix CurrentRepository to allow for test to work
+        run: sed "s+$_SERVER['DOCUMENT_ROOT'].+'/home/runner/work/laravel/laravel/public+g" /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Install Composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
       - name: Install NPM Dependencies
