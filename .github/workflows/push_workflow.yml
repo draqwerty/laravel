@@ -31,7 +31,7 @@ jobs:
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
       - name: Install Composer Dependencies
-        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --prefer-dist
+        run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
       - name: Install NPM Dependencies
         run: npm install
       - name: Generate Key
