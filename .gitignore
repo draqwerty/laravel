@@ -12,10 +12,4 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .DS_Store
-/public/wdisplay/*.gif
-/public/wdisplay/*.txt
-/public/wdisplay/*.html
-/public/wdisplay/*.jpg
-/public/wdisplay/*.htm
-/public/wdisplay/*.xml
-/public/wdisplay/*.zip
+/public/wdisplay
