@@ -16,7 +16,9 @@ jobs:
       - name: Create wdisplay folder
         run: mkdir -p public/wdtags
       - name: Create storage folder
-        run: "mkdir -p storage storage/framework && cd storage/framework && mkdir -p sessions views cache testing"
+        run: mkdir -p storage storage/framework
+      - name: Create folders within framework folders
+        run: mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache storage/framework/testing
       - name: Create wdtags file
         uses: finnp/create-file-action@master
         env:
