@@ -38,6 +38,11 @@ jobs:
         run: php artisan key:generate
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit --verbose --debug
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: logs
+          path: storage/logs
 
   build-js-production:
     name: Build JavaScript/CSS for PRODUCTION Server
