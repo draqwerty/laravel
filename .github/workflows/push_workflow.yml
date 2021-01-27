@@ -30,13 +30,8 @@ jobs:
         run: cat /home/runner/work/laravel/laravel/public/wdisplay/wdtags.php
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-      - name: Setup PHP
-        uses: shivammathur/setup-php@master
-        with:
-          php-version: 7.4
-          extensions: mbstring, bcmath
       - name: Install Composer Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --prefer-dist
       - name: Install NPM Dependencies
         run: npm install
       - name: Generate Key
