@@ -36,6 +36,7 @@ add('rsync', [
         '/node_modules/',
         '.github',
         'deploy.php',
+        '/public/wdisplay'
     ],
 ]);
 
