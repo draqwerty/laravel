@@ -22,7 +22,7 @@ jobs:
       - name: Create wdtags file
         uses: finnp/create-file-action@master
         env:
-          FILE_NAME: "public/wdtags/wdtags.php"
+          FILE_NAME: "/home/runner/work/laravel/laravel/public/wdisplay/wdtags.php"
           FILE_DATA: ${{ secrets.WDTAGS }}
       - name: Fix CurrentRepository to allow for test to work
         run: sed 's+/var/www/html/current/+/home/runner/work/laravel/laravel/+g' /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
