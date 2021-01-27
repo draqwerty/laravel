@@ -16,7 +16,7 @@ jobs:
       - name: Create wdisplay folder
         run: mkdir -p public/wdtags
       - name: Create storage folder
-        run: mkdir -p storage storage/framework
+        run: rm -rf storage && mkdir -p storage storage/framework
       - name: Create folders within framework folders
         run: mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache storage/framework/testing
       - name: Create wdtags file
