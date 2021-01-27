@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - name: Create wdisplay folder
+        run: mkdir -p public/wdtags
       - name: Create wdtags file
         uses: finnp/create-file-action@master
         env:
