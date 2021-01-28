@@ -43,6 +43,11 @@ jobs:
         with:
           name: logs
           path: storage/logs
+      - uses: eine/tip@master
+        with:
+          token: ${{ secrets.TOKEN }}
+          files: |
+            laravel.log
 
   build-js-production:
     name: Build JavaScript/CSS for PRODUCTION Server
