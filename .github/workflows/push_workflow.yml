@@ -28,6 +28,8 @@ jobs:
         run: sed -i 's+/var/www/html/current/+/home/runner/work/laravel/laravel/+g' /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Cat wdtags.php
         run: cat /home/runner/work/laravel/laravel/public/wdisplay/wdtags.php
+      - name: Cat CurrentRepository
+        run: cat /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
       - name: Install Composer Dependencies
