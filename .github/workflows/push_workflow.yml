@@ -25,7 +25,7 @@ jobs:
           FILE_NAME: "/home/runner/work/laravel/laravel/public/wdisplay/wdtags.php"
           FILE_DATA: ${{ secrets.WDTAGS }}
       - name: Fix CurrentRepository to allow for test to work
-        run: sed 's+/var/www/html/current/+/home/runner/work/laravel/laravel/+g' /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
+        run: sed -i 's+/var/www/html/current/+/home/runner/work/laravel/laravel/+g' /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Cat wdtags.php
         run: cat /home/runner/work/laravel/laravel/public/wdisplay/wdtags.php
       - name: Directory Permissions
@@ -43,12 +43,6 @@ jobs:
         with:
           name: logs
           path: storage/logs
-      - uses: eine/tip@master
-        if: failure()
-        with:
-          token: ${{ secrets.TOKEN }}
-          files: |
-            laravel.log
 
   build-js-production:
     name: Build JavaScript/CSS for PRODUCTION Server
