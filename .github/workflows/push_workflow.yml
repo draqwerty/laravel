@@ -18,17 +18,10 @@ jobs:
           extensions: mbstring, bcmath
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - name: Create wdisplay folder
-        run: mkdir -p /home/runner/work/laravel/laravel/public/wdisplay
       - name: Create storage folder
         run: rm -rf storage && mkdir -p storage storage/framework
       - name: Create folders within framework folders
         run: mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache storage/framework/testing
-      - name: Create wdtags file
-        uses: finnp/create-file-action@master
-        env:
-          FILE_NAME: "/home/runner/work/laravel/laravel/public/wdisplay/wdtags.php"
-          FILE_DATA: ${{ secrets.WDTAGS }}
       - name: Fix CurrentRepository to allow for test to work
         run: sed -i 's+/var/www/html/current/+/home/runner/work/laravel/laravel/+g' /home/runner/work/laravel/laravel/app/Http/Repository/CurrentRepository.php
       - name: Cat wdtags.php
