@@ -91,6 +91,7 @@ task('deploy', [
     'artisan:view:cache',
     'artisan:config:cache',
     'artisan:migrate',
+    'artisan:db:seed --force',
     //'artisan:queue:restart',
     'deploy:symlink',
     'wdisplay',

@@ -63,6 +63,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
           php artisan migrate
+          php artisan db:seed
           ./vendor/bin/phpunit
       - uses: actions/upload-artifact@v1
         if: failure()
