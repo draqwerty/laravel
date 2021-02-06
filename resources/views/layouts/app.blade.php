@@ -91,5 +91,16 @@
         });
     </script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = window.location;
+            $('li.nav-item a[href="'+ url +'"]').parent().addClass('active');
+            $('li.nav-item a').filter(function() {
+                 return this.href == url;
+            }).parent().addClass('active');
+        });
+    </script>
+
+
     </body>
 </html>
