@@ -82,6 +82,7 @@ jobs:
         run: |
           npm install
           npm run prod
+          ls -al
       - name: Put built assets in Artifacts
         uses: actions/upload-artifact@v1
         with:
