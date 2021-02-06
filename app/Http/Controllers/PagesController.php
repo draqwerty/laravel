@@ -10,11 +10,13 @@ use Jenssegers\Agent\Agent;
 
 class PagesController extends Controller
 {
+
     public function index(CurrentRepository $current)
     {
         $title = 'Here';
-
         $currentlist = $current->getCurrentList();
+
+        $menuList = (new MenuController)->getMenu();
 
         $response = Http::get('https://swd.weatherflow.com/swd/rest/better_forecast?station_id=35990&token=e30894fa-1a63-4b9a-8408-82008e2bc3b5&lat=-37.90115&lon=145.35545');
         $response = json_decode($response->getBody(), true);
@@ -103,21 +105,15 @@ class PagesController extends Controller
        ];
 
         return view('pages.index')->with(compact('currentlist','title'))
-                    ->with($wfforecast);
-    }
-
-    public function current()
-    {
-        $data = array(
-            'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'SEO']
-        );
-        return view('pages.current')->with($data);
+                    ->with($wfforecast)
+                    ->with('menulist', $menuList);
     }
 
     public function getWF(CurrentRepository $current)
     {
         $currentlist = $current->getCurrentList();
+
+        $menuList = (new MenuController)->getMenu();
 
         $response = Http::get('https://swd.weatherflow.com/swd/rest/observations/station/35990?token=e30894fa-1a63-4b9a-8408-82008e2bc3b5');
         $response = json_decode($response->getBody(), true);
@@ -160,7 +156,8 @@ class PagesController extends Controller
         $title = 'WFData';
 
         return view('pages.wfextract')->with(compact('currentlist','title'))
-                                      ->with($wfdata);
+                                      ->with($wfdata)
+                                      ->with('menulist', $menuList);
     }
 
 
@@ -168,71 +165,119 @@ class PagesController extends Controller
     {
         $title = 'to date graphs';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.graph.mtd', compact('currentlist','title'));
+        return view('pages.graph.mtd')->with(compact('currentlist','title'))
+                                      ->with('menulist', $menuList);
     }
 
     public function graphCurrent(CurrentRepository $current)
     {
         $title = 'to date graphs';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.graph.current', compact('currentlist','title'));
+        return view('pages.graph.current')->with(compact('currentlist','title'))
+                                          ->with('menulist', $menuList);
     }
 
     public function graphLast(CurrentRepository $current)
     {
         $title = 'last graphs (from midnight)';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.graph.last', compact('currentlist','title'));
+        return view('pages.graph.last')->with(compact('currentlist','title'))
+                                       ->with('menulist', $menuList);
     }
 
     public function moon(CurrentRepository $current)
     {
         $title = 'moon details';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.moon', compact('currentlist','title'));
+        return view('pages.moon')->with(compact('currentlist','title'))
+                                 ->with('menulist', $menuList);
     }
 
     public function recordsAll(CurrentRepository $current)
     {
         $title = 'all time records';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.records.alltime', compact('currentlist','title'));
+        return view('pages.records.alltime')->with(compact('currentlist','title'))
+                                            ->with('menulist', $menuList);
     }
 
     public function records2021(CurrentRepository $current)
     {
         $title = '2021 records';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.records.2021', compact('currentlist','title'));
+        return view('pages.records.2021')->with(compact('currentlist','title'))
+                                         ->with('menulist', $menuList);
     }
 
     public function recordsMonth(CurrentRepository $current)
     {
         $title = 'current month records';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.records.currentmonth', compact('currentlist','title'));
+        return view('pages.records.currentmonth')->with(compact('currentlist','title'))
+                                               ->with('menulist', $menuList);
     }
 
     public function recordsYear(CurrentRepository $current)
     {
         $title = 'current year records';
 
+        $menuList = (new MenuController)->getMenu();
+
         $currentlist = $current->getCurrentList();
 
-        return view('pages.records.currentyear', compact('currentlist','title'));
+        return view('pages.records.currentyear')->with(compact('currentlist','title'))
+                                                ->with('menulist', $menuList);
+    }
+
+    public function wdLive(CurrentRepository $current)
+    {
+        $title = 'weather data live';
+
+        $menuList = (new MenuController)->getMenu();
+
+        $currentlist = $current->getCurrentList();
+
+        return view('pages.wdlive')->with(compact('currentlist','title'))
+                                   ->with('menulist', $menuList);
+    }
+
+    public function reportsDaily(CurrentRepository $current)
+    {
+        $title = 'daily report';
+
+        $menuList = (new MenuController)->getMenu();
+
+        $currentlist = $current->getCurrentList();
+
+        return view('pages.reports.daily')->with(compact('currentlist','title'))
+                                          ->with('menulist', $menuList);
     }
 }

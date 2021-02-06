@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    {{config('app.weatherfolder', 'IMELBO2077kk')}}
-{{config('app.name', 'IMELBO2077jj')}}
+
     <h1>{{ $title }}</h1>
     <br />
     <div class="card" style="width: 42rem;">
@@ -16,4 +15,5 @@
     <div class="card" style="width: 12rem;">
       <img src="{{ config('app.weatherfolder', '/wdisplay') }}/moonicon.gif" class="card-img-bottom" alt="last 3 days">
     </div>
+    
 @endsection

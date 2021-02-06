@@ -4,13 +4,13 @@
 
 <WXDATA>
  <PARAM>
-  <time>07:03 AM</time>
-  <date>28/1/2021</date>
-  <sunrise>6:27 am</sunrise>
-  <sunset>8:35 pm</sunset>
-  <moonrise>7:42 pm</moonrise>
-  <moonset>5:16 am</moonset>
-  <moonage>Moon age: 13 days,18 hours,58 minutes,99%</moonage>
+  <time>06:20 AM</time>
+  <date>1/2/2021</date>
+  <sunrise>6:33 am</sunrise>
+  <sunset>8:30 pm</sunset>
+  <moonrise>10:21 pm</moonrise>
+  <moonset>9:44 am</moonset>
+  <moonage>Moon age: 17 days,21 hours,56 minutes,89%</moonage>
   <marchequinox>09:38 UTC 20 March 2021</marchequinox>
   <junesolstice>03:33 UTC 21 June 2021</junesolstice>
   <sepequinox>19:22 UTC 22 September 2021</sepequinox>
@@ -19,32 +19,32 @@
   <moonaphel>02:08 UTC 5 July 2021</moonaphel>
   <moonperigee>19:32 UTC 3 February 2021</moonperigee>
   <moonapogee>10:22 UTC 18 February 2021</moonapogee>
-  <suneclipse>04 December 2021 09:14:58 7%</suneclipse>
-  <mooneclipse>19 November 2021 09:03:21 97%</mooneclipse>
+  <suneclipse>04 December 2021 19:16:04 4%</suneclipse>
+  <mooneclipse>26 May 2021 21:19:07 101%</mooneclipse>
   <easterdate>4 April 2021</easterdate>
   <weathercond>Dry</weathercond>
   <weatherreport>mostly cloudy</weatherreport>
   <extrametarlabel> mostly cloudy</extrametarlabel>
-  <metarcloudreport>mostly cloudy</metarcloudreport>
+  <metarcloudreport>Scattered clouds at 28000 ft</metarcloudreport>
   <statusmessage></statusmessage>
   <wdversion>10.37S</wdversion>
   <inputdailyweather>---</inputdailyweather>
-  <formateddate>DATE: 28 January 2021</formateddate>
-  <time-minute>03</time-minute>
-  <time-hour>07</time-hour>
-  <date-day>28</date-day>
+  <formateddate>DATE: 01 February 2021</formateddate>
+  <time-minute>20</time-minute>
+  <time-hour>06</time-hour>
+  <date-day>01</date-day>
+  <date-month>02</date-month>
+  <date-year>2021</date-year>
+  <time-minute>20</time-minute>
+  <time-hour>19</time-hour>
+  <date-day>31</date-day>
   <date-month>01</date-month>
   <date-year>2021</date-year>
-  <time-minute>03</time-minute>
-  <time-hour>20</time-hour>
-  <date-day>27</date-day>
-  <date-month>01</date-month>
-  <date-year>2021</date-year>
-  <cloudheightfeet>1743</cloudheightfeet>
-  <cloudheightmeters>531</cloudheightmeters>
-  <windowsuptime>12 Days 13 Hours 20 Minutes 24 Seconds</windowsuptime>
-  <timeofnextupdate>7:04 am</timeofnextupdate>
-  <Startimedate>7:43:58 AM 16/01/2021</Startimedate>
+  <cloudheightfeet>188</cloudheightfeet>
+  <cloudheightmeters>57</cloudheightmeters>
+  <windowsuptime>16 Days 12 Hours 37 Minutes 42 Seconds</windowsuptime>
+  <timeofnextupdate>6:21 am</timeofnextupdate>
+  <Startimedate>10:27:20 AM 31/01/2021</Startimedate>
   <usnavycloudheight1>255</usnavycloudheight1>
   <usnavycloudheight2>255</usnavycloudheight2>
   <usnavycloudheight3>255</usnavycloudheight3>
@@ -54,96 +54,96 @@
   <watertempcelsius>-10</watertempcelsius>
   <watertempfaren>14</watertempfaren>
   <visibility>---</visibility>
-  <monthtodateavtemp>17.7</monthtodateavtemp>
-  <monthtodateavtempcelsius>17.7</monthtodateavtempcelsius>
-  <monthtodateavhum>73.6</monthtodateavhum>
-  <monthtodateavdp>12.0</monthtodateavdp>
-  <monthtodateavdpcelsius>12.0</monthtodateavdpcelsius>
-  <monthtodateavbaro>1014.5</monthtodateavbaro>
-  <monthtodateavbaromb>1014.5</monthtodateavbaromb>
-  <monthtodateavspeed>1.9</monthtodateavspeed>
-  <monthtodateavspeedkts>1.0</monthtodateavspeedkts>
-  <monthtodateavspeedms>0.5</monthtodateavspeedms>
-  <monthtodateavspeedkmh>1.9</monthtodateavspeedkmh>
-  <monthtodateavgust>4.8</monthtodateavgust>
-  <monthtodateavgustkts>2.6</monthtodateavgustkts>
-  <monthtodateavgustms>1.3</monthtodateavgustms>
-  <monthtodateavgustkmh>4.8</monthtodateavgustkmh>
-  <monthtodateavdir>185</monthtodateavdir>
-  <monthtodatemaxtemp>36.4</monthtodatemaxtemp>
-  <monthtodatemaxtempcelsius>36.4</monthtodatemaxtempcelsius>
-  <monthtodatemintemp>7.8</monthtodatemintemp>
-  <monthtodatemintempcelsius>7.8</monthtodatemintempcelsius>
-  <monthtodatemaxhum>100.0</monthtodatemaxhum>
-  <monthtodateminhum>22.0</monthtodateminhum>
-  <monthtodatemaxdp>18.9</monthtodatemaxdp>
-  <monthtodatemaxdpcelsius>18.9</monthtodatemaxdpcelsius>
-  <monthtodatemindp>2.7</monthtodatemindp>
-  <monthtodatemindpcelsius>2.7</monthtodatemindpcelsius>
-  <monthtodatemaxbaro>1028.8</monthtodatemaxbaro>
-  <monthtodatemaxbaromb>1028.8</monthtodatemaxbaromb>
-  <monthtodateminbaro>996.6</monthtodateminbaro>
-  <monthtodateminbaromb>996.6</monthtodateminbaromb>
-  <monthtodatemaxwind>13.0</monthtodatemaxwind>
-  <monthtodatemaxwindms>3.6</monthtodatemaxwindms>
-  <monthtodatemaxwindkts>7.0</monthtodatemaxwindkts>
-  <monthtodatemaxwindkmh>13.0</monthtodatemaxwindkmh>
-  <monthtodatemaxgust>27.8</monthtodatemaxgust>
-  <monthtodatemaxgustms>7.7</monthtodatemaxgustms>
-  <monthtodatemaxgustkts>15.0</monthtodatemaxgustkts>
-  <monthtodatemaxgustkmh>27.8</monthtodatemaxgustkmh>
-  <last24houravtemp>16.9</last24houravtemp>
-  <temp>16.0</temp>
-  <hum>76</hum>
-  <dew>11.8</dew>
-  <heati>16.0</heati>
-  <maxtemp>16.0</maxtemp>
-  <maxtempt>6:31 AM</maxtempt>
-  <mintemp>15.2</mintemp>
-  <mintempt>1:23 AM</mintempt>
-  <windch>16.0</windch>
-  <minwindch>15.2</minwindch>
-  <minwindcht>1:23 AM</minwindcht>
-  <maxwindchill>16.0</maxwindchill>
-  <maxwindchillt>6:31 AM</maxwindchillt>
-  <highhum>80</highhum>
-  <highhumt>12:00 AM</highhumt>
-  <lowhum>75</lowhum>
-  <lowhumt>5:58 AM</lowhumt>
+  <monthtodateavtemp>11.3</monthtodateavtemp>
+  <monthtodateavtempcelsius>11.3</monthtodateavtempcelsius>
+  <monthtodateavhum>96.7</monthtodateavhum>
+  <monthtodateavdp>10.8</monthtodateavdp>
+  <monthtodateavdpcelsius>10.8</monthtodateavdpcelsius>
+  <monthtodateavbaro>1013.0</monthtodateavbaro>
+  <monthtodateavbaromb>1013.0</monthtodateavbaromb>
+  <monthtodateavspeed>1.4</monthtodateavspeed>
+  <monthtodateavspeedkts>0.8</monthtodateavspeedkts>
+  <monthtodateavspeedms>0.4</monthtodateavspeedms>
+  <monthtodateavspeedkmh>1.4</monthtodateavspeedkmh>
+  <monthtodateavgust>2.8</monthtodateavgust>
+  <monthtodateavgustkts>1.5</monthtodateavgustkts>
+  <monthtodateavgustms>0.8</monthtodateavgustms>
+  <monthtodateavgustkmh>2.8</monthtodateavgustkmh>
+  <monthtodateavdir>284</monthtodateavdir>
+  <monthtodatemaxtemp>12.9</monthtodatemaxtemp>
+  <monthtodatemaxtempcelsius>12.9</monthtodatemaxtempcelsius>
+  <monthtodatemintemp>10.6</monthtodatemintemp>
+  <monthtodatemintempcelsius>10.6</monthtodatemintempcelsius>
+  <monthtodatemaxhum>98.0</monthtodatemaxhum>
+  <monthtodateminhum>90.0</monthtodateminhum>
+  <monthtodatemaxdp>11.5</monthtodatemaxdp>
+  <monthtodatemaxdpcelsius>11.5</monthtodatemaxdpcelsius>
+  <monthtodatemindp>10.3</monthtodatemindp>
+  <monthtodatemindpcelsius>10.3</monthtodatemindpcelsius>
+  <monthtodatemaxbaro>1014.9</monthtodatemaxbaro>
+  <monthtodatemaxbaromb>1014.9</monthtodatemaxbaromb>
+  <monthtodateminbaro>1012.0</monthtodateminbaro>
+  <monthtodateminbaromb>1012.0</monthtodateminbaromb>
+  <monthtodatemaxwind>3.7</monthtodatemaxwind>
+  <monthtodatemaxwindms>1.0</monthtodatemaxwindms>
+  <monthtodatemaxwindkts>2.0</monthtodatemaxwindkts>
+  <monthtodatemaxwindkmh>3.7</monthtodatemaxwindkmh>
+  <monthtodatemaxgust>7.4</monthtodatemaxgust>
+  <monthtodatemaxgustms>2.1</monthtodatemaxgustms>
+  <monthtodatemaxgustkts>4.0</monthtodatemaxgustkts>
+  <monthtodatemaxgustkmh>7.4</monthtodatemaxgustkmh>
+  <last24houravtemp>14.8</last24houravtemp>
+  <temp>10.7</temp>
+  <hum>97</hum>
+  <dew>10.2</dew>
+  <heati>10.7</heati>
+  <maxtemp>12.9</maxtemp>
+  <maxtempt>12:59 AM</maxtempt>
+  <mintemp>10.6</mintemp>
+  <mintempt>5:06 AM</mintempt>
+  <windch>10.7</windch>
+  <minwindch>10.6</minwindch>
+  <minwindcht>5:06 AM</minwindcht>
+  <maxwindchill>12.9</maxwindchill>
+  <maxwindchillt>12:59 AM</maxwindchillt>
+  <highhum>98</highhum>
+  <highhumt>2:18 AM</highhumt>
+  <lowhum>90</lowhum>
+  <lowhumt>1:00 AM</lowhumt>
   <indoortemp>11.0</indoortemp>
   <indoorhum>47</indoorhum>
-  <maxdew>12.3</maxdew>
-  <maxdewt>12:00 AM</maxdewt>
-  <mindew>11.5</mindew>
-  <mindewt>5:58 AM</mindewt>
-  <maxheat>16.0</maxheat>
-  <maxheatt>6:31 AM</maxheatt>
-  <minheat>15.2</minheat>
-  <minheatt>1:23 AM</minheatt>
-  <avtempsince6amUSA>60.7</avtempsince6amUSA>
-  <avtempsince6am>16.0</avtempsince6am>
-  <avtempsince6pmUSA>62.1</avtempsince6pmUSA>
-  <avtempsince6pm>16.7</avtempsince6pm>
-  <tempinmetric>16.0</tempinmetric>
-  <dewinmetric>11.8</dewinmetric>
-  <heatindexinmetric>16.0</heatindexinmetric>
-  <windchillinmetric>16.0</windchillinmetric>
-  <maxheatinmetric>16.0</maxheatinmetric>
-  <minheatinmetric>15.2</minheatinmetric>
-  <maxhighdewinmetric>12.3</maxhighdewinmetric>
-  <minlowdewinmetric>11.5</minlowdewinmetric>
-  <maxhighchillinmetric>16.0</maxhighchillinmetric>
-  <minlowchillinmetric>15.2</minlowchillinmetric>
-  <wetbulb>13.7</wetbulb>
-  <tempinusa>60.8</tempinusa>
-  <dewinusa>53.2</dewinusa>
-  <hightempinusa>60.8</hightempinusa>
-  <lowtempinusa>59.4</lowtempinusa>
+  <maxdew>11.5</maxdew>
+  <maxdewt>12:58 AM</maxdewt>
+  <mindew>10.1</mindew>
+  <mindewt>5:06 AM</mindewt>
+  <maxheat>12.9</maxheat>
+  <maxheatt>12:59 AM</maxheatt>
+  <minheat>10.6</minheat>
+  <minheatt>5:06 AM</minheatt>
+  <avtempsince6amUSA>51.3</avtempsince6amUSA>
+  <avtempsince6am>10.7</avtempsince6am>
+  <avtempsince6pmUSA>55.0</avtempsince6pmUSA>
+  <avtempsince6pm>12.8</avtempsince6pm>
+  <tempinmetric>10.7</tempinmetric>
+  <dewinmetric>10.2</dewinmetric>
+  <heatindexinmetric>10.7</heatindexinmetric>
+  <windchillinmetric>10.7</windchillinmetric>
+  <maxheatinmetric>12.9</maxheatinmetric>
+  <minheatinmetric>10.6</minheatinmetric>
+  <maxhighdewinmetric>11.5</maxhighdewinmetric>
+  <minlowdewinmetric>10.1</minlowdewinmetric>
+  <maxhighchillinmetric>12.9</maxhighchillinmetric>
+  <minlowchillinmetric>10.6</minlowchillinmetric>
+  <wetbulb>10.5</wetbulb>
+  <tempinusa>51.3</tempinusa>
+  <dewinusa>50.4</dewinusa>
+  <hightempinusa>55.2</hightempinusa>
+  <lowtempinusa>51.1</lowtempinusa>
   <indoortempinmetric>11.0</indoortempinmetric>
   <tempchangelasthourmetric>+0.1</tempchangelasthourmetric>
   <tempchangelasthourfaren>+0.2</tempchangelasthourfaren>
-  <wholeroundedtempcelcius>16</wholeroundedtempcelcius>
-  <wholeroundedtempfaren>61</wholeroundedtempfaren>
+  <wholeroundedtempcelcius>11</wholeroundedtempcelcius>
+  <wholeroundedtempfaren>51</wholeroundedtempfaren>
   <maxindoortemp>11.0</maxindoortemp>
   <maxindoortempcelsius>11.0</maxindoortempcelsius>
   <minindoortemp>11.0</minindoortemp>
@@ -154,37 +154,37 @@
   <watertempfaren>14</watertempfaren>
   <visibility>---</visibility>
   <soiltemp>100.0</soiltemp>
-  <apparenttemp>16.7</apparenttemp>
-  <apparentsolartemp>18.7</apparentsolartemp>
-  <apparenttempc>16.7</apparenttempc>
-  <apparentsolartempc>18.7</apparentsolartempc>
-  <apparenttempf>62.1</apparenttempf>
-  <apparentsolartempf>65.7</apparentsolartempf>
+  <apparenttemp>10.5</apparenttemp>
+  <apparentsolartemp>10.5</apparentsolartemp>
+  <apparenttempc>10.5</apparenttempc>
+  <apparentsolartempc>10.5</apparentsolartempc>
+  <apparenttempf>50.8</apparenttempf>
+  <apparentsolartempf>50.8</apparentsolartempf>
   <extratemp1>25.8</extratemp1>
   <indoordewfaren>32.2</indoordewfaren>
   <indoordewcelsius>0.1</indoordewcelsius>
-  <humidexfaren>64.7</humidexfaren>
-  <humidexcelsius>18.1</humidexcelsius>
+  <humidexfaren>53.8</humidexfaren>
+  <humidexcelsius>12.1</humidexcelsius>
   <tempchangehour>+0.1</tempchangehour>
-  <maxdewyest>12.6</maxdewyest>
-  <maxdewyestt>10:47 PM</maxdewyestt>
-  <mindewyest>6.1</mindewyest>
-  <mindewyestt>6:37 AM</mindewyestt>
-  <maxhumyestt>3:16 AM</maxhumyestt>
-  <minhumyest>38</minhumyest>
-  <minhumyestt>3:45 PM</minhumyestt>
-  <maxchillyest>22.7</maxchillyest>
-  <maxchillyestt>4:58 PM</maxchillyestt>
-  <minchillyest>9.8</minchillyest>
-  <minchillyestt>2:03 AM</minchillyestt>
-  <maxheatyest>22.7</maxheatyest>
-  <maxheatyestt>4:58 PM</maxheatyestt>
-  <minheatyest>9.8</minheatyest>
-  <minheatyestt>2:03 AM</minheatyestt>
-  <maxtempyest>22.7</maxtempyest>
-  <maxtempyestt>4:58 PM</maxtempyestt>
-  <mintempyest>9.8</mintempyest>
-  <mintempyestt>2:03 AM</mintempyestt>
+  <maxdewyest>12.4</maxdewyest>
+  <maxdewyestt>5:56 PM</maxdewyestt>
+  <mindewyest>8.8</mindewyest>
+  <mindewyestt>10:10 AM</mindewyestt>
+  <maxhumyestt>1:31 AM</maxhumyestt>
+  <minhumyest>55</minhumyest>
+  <minhumyestt>3:57 PM</minhumyestt>
+  <maxchillyest>20.6</maxchillyest>
+  <maxchillyestt>4:02 PM</maxchillyestt>
+  <minchillyest>11.1</minchillyest>
+  <minchillyestt>11:26 PM</minchillyestt>
+  <maxheatyest>20.6</maxheatyest>
+  <maxheatyestt>4:02 PM</maxheatyestt>
+  <minheatyest>11.1</minheatyest>
+  <minheatyestt>11:26 PM</minheatyestt>
+  <maxtempyest>20.6</maxtempyest>
+  <maxtempyestt>4:02 PM</maxtempyestt>
+  <mintempyest>11.1</mintempyest>
+  <mintempyestt>11:26 PM</mintempyestt>
   <maxindoortempyest>11.0</maxindoortempyest>
   <minindoortempyest>11.0</minindoortempyest>
   <maxindoortempyestt>12:00 AM</maxindoortempyestt>
@@ -196,90 +196,90 @@
   <generalextratemp5>-100.0</generalextratemp5>
   <generalextratemp6>-100.0</generalextratemp6>
   <generalextratemp7>-100.0</generalextratemp7>
-  <avgspd>0.0</avgspd>
-  <gstspd>0.0</gstspd>
-  <dirdeg>217</dirdeg>
-  <dirlabel>SW</dirlabel>
-  <winddirinwords>South west</winddirinwords>
-  <maxgst>13.7</maxgst>
-  <maxgstt>6:44 AM</maxgstt>
-  <maxavgspd>7.5</maxavgspd>
-  <maxavgspdt>6:19 AM</maxavgspdt>
-  <maxgsthr>13.7 kmh  N </maxgsthr>
-  <maxgsthrt>6:44 AM</maxgsthrt>
-  <maxgustlastimediatehour>13.7</maxgustlastimediatehour>
-  <avdir10minute>249</avdir10minute>
-  <avtenminutewind>1.3</avtenminutewind>
-  <max1minuteavwind>7.4</max1minuteavwind>
-  <avspeedinmetric>0.0</avspeedinmetric>
-  <gustspeedinmetric>0.0</gustspeedinmetric>
+  <avgspd>2.5</avgspd>
+  <gstspd>2.5</gstspd>
+  <dirdeg>269</dirdeg>
+  <dirlabel>W</dirlabel>
+  <winddirinwords>West</winddirinwords>
+  <maxgst>7.9</maxgst>
+  <maxgstt>12:49 AM</maxgstt>
+  <maxavgspd>4.3</maxavgspd>
+  <maxavgspdt>12:58 AM</maxavgspdt>
+  <maxgsthr>3.6 kmh  W</maxgsthr>
+  <maxgsthrt>5:31 AM</maxgsthrt>
+  <maxgustlastimediatehour>3.6</maxgustlastimediatehour>
+  <avdir10minute>297</avdir10minute>
+  <avtenminutewind>2.0</avtenminutewind>
+  <max1minuteavwind>3.7</max1minuteavwind>
+  <avspeedinmetric>1.4</avspeedinmetric>
+  <gustspeedinmetric>1.4</gustspeedinmetric>
   <beaufortnum>0</beaufortnum>
-  <currbftspeed>0 bft</currbftspeed>
-  <todaygustspeedinmetric>7.4</todaygustspeedinmetric>
-  <maxgustlasthourinmetric>7.4</maxgustlasthourinmetric>
-  <maxavspeedinkts>4.1</maxavspeedinkts>
-  <maxgustlasthourkts>7.4</maxgustlasthourkts>
-  <maxgustlastmininkts>0.0</maxgustlastmininkts>
-  <max1minavspeedlast12hrs>6.0</max1minavspeedlast12hrs>
-  <maxdailygustinkts>7.4</maxdailygustinkts>
-  <windgaugepointer></windgaugepointer>
-  <gustgaugepointer></gustgaugepointer>
-  <windinmph>0.0</windinmph>
-  <gustinmph>0.0</gustinmph>
-  <curdir10minutelabel>WSW</curdir10minutelabel>
-  <currentavtenminutewindms>0.0</currentavtenminutewindms>
-  <highavtenminutewind>16.7</highavtenminutewind>
-  <highavtenminutewindms>4.6</highavtenminutewindms>
-  <highavtenminutewindkts>9.0</highavtenminutewindkts>
-  <highavtenminutewindkmh>16.7</highavtenminutewindkmh>
-  <todaygustspeedinms>3.8</todaygustspeedinms>
-  <maxgustlasthourinms>3.8</maxgustlasthourinms>
-  <maxavspeedinms>2.1</maxavspeedinms>
-  <maxgustlasthourms>3.8</maxgustlasthourms>
-  <maxgustlastmininms>0.0</maxgustlastmininms>
-  <max1minavspeedlast12hrsms>3.1</max1minavspeedlast12hrsms>
-  <maxdailygustinms>3.8</maxdailygustinms>
-  <windruntodatethismonth>1241.72 km</windruntodatethismonth>
-  <windruntodatethisyear>1241.72 km</windruntodatethisyear>
-  <windruntoday>8.17</windruntoday>
-  <bftspeedtext>Calm</bftspeedtext>
-  <maxgustyest>27.8 kmh  SE</maxgustyest>
-  <maxgustyestt>4:11 PM</maxgustyestt>
-  <maxaverageyest>11.5</maxaverageyest>
-  <maxaverageyestt>3:31 PM</maxaverageyestt>
-  <baro>1015.9</baro>
-  <trend>+0.7</trend>
-  <highbaro>1015.9 </highbaro>
-  <highbarot>3:13 AM</highbarot>
-  <lowbaro>1014.2 </lowbaro>
-  <lowbarot>12:28 AM</lowbarot>
-  <pressurechangein3hour>+1.2</pressurechangein3hour>
-  <pressurechangein6hour>+1.4</pressurechangein6hour>
-  <pressurechangein12hour>+3.3</pressurechangein12hour>
-  <pressurechangein24hour>+1.0</pressurechangein24hour>
+  <currbftspeed>1 bft</currbftspeed>
+  <todaygustspeedinmetric>4.3</todaygustspeedinmetric>
+  <maxgustlasthourinmetric>1.9</maxgustlasthourinmetric>
+  <maxavspeedinkts>2.3</maxavspeedinkts>
+  <maxgustlasthourkts>1.9</maxgustlasthourkts>
+  <maxgustlastmininkts>2.0</maxgustlastmininkts>
+  <max1minavspeedlast12hrs>4.0</max1minavspeedlast12hrs>
+  <maxdailygustinkts>4.3</maxdailygustinkts>
+  <windgaugepointer>avwindpoint1</windgaugepointer>
+  <gustgaugepointer>gustwindpoint1</gustgaugepointer>
+  <windinmph>1.6</windinmph>
+  <gustinmph>1.6</gustinmph>
+  <curdir10minutelabel>WNW</curdir10minutelabel>
+  <currentavtenminutewindms>0.5</currentavtenminutewindms>
+  <highavtenminutewind>14.1</highavtenminutewind>
+  <highavtenminutewindms>3.9</highavtenminutewindms>
+  <highavtenminutewindkts>7.6</highavtenminutewindkts>
+  <highavtenminutewindkmh>14.1</highavtenminutewindkmh>
+  <todaygustspeedinms>2.2</todaygustspeedinms>
+  <maxgustlasthourinms>1.0</maxgustlasthourinms>
+  <maxavspeedinms>1.2</maxavspeedinms>
+  <maxgustlasthourms>1.0</maxgustlasthourms>
+  <maxgustlastmininms>1.0</maxgustlastmininms>
+  <max1minavspeedlast12hrsms>2.1</max1minavspeedlast12hrsms>
+  <maxdailygustinms>2.2</maxdailygustinms>
+  <windruntodatethismonth>8.88 km</windruntodatethismonth>
+  <windruntodatethisyear>1436.65 km</windruntodatethisyear>
+  <windruntoday>8.88</windruntoday>
+  <bftspeedtext>Light Air</bftspeedtext>
+  <maxgustyest>20.5 kmh   S</maxgustyest>
+  <maxgustyestt>11:32 AM</maxgustyestt>
+  <maxaverageyest>9.0</maxaverageyest>
+  <maxaverageyestt>11:32 AM</maxaverageyestt>
+  <baro>1013.1</baro>
+  <trend>+0.8</trend>
+  <highbaro>1014.9 </highbaro>
+  <highbarot>12:00 AM</highbarot>
+  <lowbaro>1012.0 </lowbaro>
+  <lowbarot>4:46 AM</lowbarot>
+  <pressurechangein3hour>+0.4</pressurechangein3hour>
+  <pressurechangein6hour>-1.6</pressurechangein6hour>
+  <pressurechangein12hour>-2.4</pressurechangein12hour>
+  <pressurechangein24hour>---</pressurechangein24hour>
   <pressuretrendname>Rising slowly</pressuretrendname>
-  <maxbaroinmetric>1015.9 hPa</maxbaroinmetric>
-  <minbaroinmetric>1014.2 hPa</minbaroinmetric>
-  <baroinusa>30.000 inches</baroinusa>
-  <baroinmetric>1015.9</baroinmetric>
-  <currentpressureinmb>1015.9</currentpressureinmb>
-  <pressurechangehourinmb>+0.6</pressurechangehourinmb>
-  <pressurechange3hourinmb>+1.2</pressurechange3hourinmb>
-  <pressurechange6hourinmb>+1.4</pressurechange6hourinmb>
-  <pressurechange12hourinmb>+3.3</pressurechange12hourinmb>
-  <pressurechange24hourinmb>+1.0</pressurechange24hourinmb>
-  <baroininches2dp>30.00</baroininches2dp>
+  <maxbaroinmetric>1014.9 hPa</maxbaroinmetric>
+  <minbaroinmetric>1012.0 hPa</minbaroinmetric>
+  <baroinusa>29.917 inches</baroinusa>
+  <baroinmetric>1013.1</baroinmetric>
+  <currentpressureinmb>1013.1</currentpressureinmb>
+  <pressurechangehourinmb>+0.8</pressurechangehourinmb>
+  <pressurechange3hourinmb>+0.4</pressurechange3hourinmb>
+  <pressurechange6hourinmb>-1.6</pressurechange6hourinmb>
+  <pressurechange12hourinmb>-2.4</pressurechange12hourinmb>
+  <pressurechange24hourinmb>+1013.1</pressurechange24hourinmb>
+  <baroininches2dp>29.92</baroininches2dp>
   <vpforecasttext>---</vpforecasttext>
-  <vapourpressure>13.80</vapourpressure>
-  <maxbaroyest>1016.3 </maxbaroyest>
-  <maxbaroyestt>9:27 AM</maxbaroyestt>
-  <minbaroyest>1011.8 </minbaroyest>
-  <minbaroyestt>6:08 PM</minbaroyestt>
-  <maxhumyest>92</maxhumyest>
+  <vapourpressure>12.47</vapourpressure>
+  <maxbaroyest>1019.2 </maxbaroyest>
+  <maxbaroyestt>10:41 AM</maxbaroyestt>
+  <minbaroyest>1014.9 </minbaroyest>
+  <minbaroyestt>11:56 PM</minbaroyestt>
+  <maxhumyest>95</maxhumyest>
   <dayrn>  0.000</dayrn>
   <dayrnusa>0.00</dayrnusa>
-  <monthrn>32.085</monthrn>
-  <yearrn>32.1</yearrn>
+  <monthrn>116.600</monthrn>
+  <yearrn>116.6</yearrn>
   <hourrn>0.0</hourrn>
   <maxrainminlasthour>0.0</maxrainminlasthour>
   <maxrainhourlast6hours>0.0</maxrainhourlast6hours>
@@ -287,11 +287,11 @@
   <totalrainlast6hours>0.0</totalrainlast6hours>
   <totalrainlast24hours>0.0</totalrainlast24hours>
   <currentmonthaveragerain>---</currentmonthaveragerain>
-  <dayswithnorain>10</dayswithnorain>
+  <dayswithnorain>14</dayswithnorain>
   <rainduration>0</rainduration>
   <todayraininmm>0.000</todayraininmm>
-  <monthraininmm>32.085</monthraininmm>
-  <yearlyraininmm>32.085</yearlyraininmm>
+  <monthraininmm>116.600</monthraininmm>
+  <yearlyraininmm>116.600</yearlyraininmm>
   <rainlasthourmm>0.000</rainlasthourmm>
   <rainlast3hourmm>0.0</rainlast3hourmm>
   <rainlast6hourmm>0.0</rainlast6hourmm>
@@ -300,26 +300,26 @@
   <ystdyrain>0.0</ystdyrain>
   <yesterdayrain>0.0</yesterdayrain>
   <yesterdayrainmm>0.0</yesterdayrainmm>
-  <FWIffmc>41.9</FWIffmc>
-  <FWIbui>57.4</FWIbui>
-  <FWIisi>0.1</FWIisi>
-  <FWIdmc>41.0</FWIdmc>
-  <FWIdc>240.3</FWIdc>
-  <FWIfwi>0.1</FWIfwi>
-  <Currentsolardescription>Dry</Currentsolardescription>
-  <sunshinehourstodatemonth>27:39</sunshinehourstodatemonth>
-  <sunshinehourstodateyear>27:39</sunshinehourstodateyear>
+  <FWIffmc>76.2</FWIffmc>
+  <FWIbui>62.5</FWIbui>
+  <FWIisi>1.0</FWIisi>
+  <FWIdmc>44.0</FWIdmc>
+  <FWIdc>269.6</FWIdc>
+  <FWIfwi>3.5</FWIfwi>
+  <Currentsolardescription>Sunrise/Dry/Scattered clouds </Currentsolardescription>
+  <sunshinehourstodatemonth>31:19</sunshinehourstodatemonth>
+  <sunshinehourstodateyear>31:19</sunshinehourstodateyear>
   <sunshinehourstodateday>00:00</sunshinehourstodateday>
-  <VPsolar>13</VPsolar>
-  <VPuv>0.2</VPuv>
+  <VPsolar>0</VPsolar>
+  <VPuv>0.0</VPuv>
   <VPet>0.0</VPet>
-  <highsolar>14</highsolar>
-  <highsolar>14</highsolar>
-  <highuv>0.2</highuv>
+  <highsolar>1</highsolar>
+  <highsolar>1</highsolar>
+  <highuv>0.0</highuv>
   <lowuv>0.0</lowuv>
-  <currentsolarpercent>2</currentsolarpercent>
-  <currentwdet>0.3</currentwdet>
-  <yesterdaywdet>0.9</yesterdaywdet>
+  <currentsolarpercent>0</currentsolarpercent>
+  <currentwdet>0.1</currentwdet>
+  <yesterdaywdet>0.6</yesterdaywdet>
   <growsolar>0</growsolar>
   <VPsoilmoisture>255.0</VPsoilmoisture>
   <VPsoilmoisture2>255.0</VPsoilmoisture2>
@@ -416,7 +416,7 @@
   <lows2000sen9tt>12:00 AM</lows2000sen9tt>
   <recordhightemp>36.4</recordhightemp>
   <recordlowtemp>7.0</recordlowtemp>
-  <recordwindgust>27.0</recordwindgust>
+  <recordwindgust>27.8</recordwindgust>
   <recordwindspeed>15.5</recordwindspeed>
   <recorddailyrain>11.0</recorddailyrain>
   <recordlowchill>7.0</recordlowchill>
@@ -454,41 +454,41 @@
   <coldestnightonrecord>9.2C  on: 16 Jan 2021</coldestnightonrecord>
   <coldestdayonrecord>12.6C  on: 16 Jan 2021</coldestdayonrecord>
   <warmestnightonrecord>26.9C  on: 25 Jan 2021</warmestnightonrecord>
-  <warmestdayonrecord>30.2 C  on: 11 Jan 2021</warmestdayonrecord>
-  <mrecordhightemp>36.4</mrecordhightemp>
-  <mrecordlowtemp>7.8</mrecordlowtemp>
-  <mrecordwindgust>27.0</mrecordwindgust>
-  <mrecordwindspeed>15.5</mrecordwindspeed>
-  <mrecorddailyrain>11.0</mrecorddailyrain>
-  <mrecordlowchill>7.8</mrecordlowchill>
-  <mrecordhighbaro>1028.8</mrecordhighbaro>
-  <mrecordlowbaro>996.6</mrecordlowbaro>
-  <mrecordlowbaroday>26</mrecordlowbaroday>
-  <mrecordhighbaroday>8</mrecordhighbaroday>
-  <mrecordlowbaromonth>1</mrecordlowbaromonth>
-  <mrecordhighbaromonth>1</mrecordhighbaromonth>
+  <warmestdayonrecord>33.8 C  on: 24 Jan 2021</warmestdayonrecord>
+  <mrecordhightemp>12.9</mrecordhightemp>
+  <mrecordlowtemp>10.6</mrecordlowtemp>
+  <mrecordwindgust>7.9</mrecordwindgust>
+  <mrecordwindspeed>4.3</mrecordwindspeed>
+  <mrecorddailyrain>0.0</mrecorddailyrain>
+  <mrecordlowchill>10.6</mrecordlowchill>
+  <mrecordhighbaro>1014.9</mrecordhighbaro>
+  <mrecordlowbaro>1012.0</mrecordlowbaro>
+  <mrecordlowbaroday>1</mrecordlowbaroday>
+  <mrecordhighbaroday>1</mrecordhighbaroday>
+  <mrecordlowbaromonth>2</mrecordlowbaromonth>
+  <mrecordhighbaromonth>2</mrecordhighbaromonth>
   <mrecordlowbaroyear>2021</mrecordlowbaroyear>
   <mrecordhighbaroyear>2021</mrecordhighbaroyear>
-  <mrecordlowtempday>15</mrecordlowtempday>
-  <mrecordhightempday>25</mrecordhightempday>
-  <mrecordlowtempmonth>1</mrecordlowtempmonth>
-  <mrecordhightempmonth>1</mrecordhightempmonth>
+  <mrecordlowtempday>1</mrecordlowtempday>
+  <mrecordhightempday>1</mrecordhightempday>
+  <mrecordlowtempmonth>2</mrecordlowtempmonth>
+  <mrecordhightempmonth>2</mrecordhightempmonth>
   <mrecordlowtempyear>2021</mrecordlowtempyear>
   <mrecordhightempyear>2021</mrecordhightempyear>
-  <mrecordhighgustday>11</mrecordhighgustday>
-  <mrecordhighgustmonth>1</mrecordhighgustmonth>
+  <mrecordhighgustday>1</mrecordhighgustday>
+  <mrecordhighgustmonth>2</mrecordhighgustmonth>
   <mrecordhighgustyear>2021</mrecordhighgustyear>
-  <mrecordhighavwindday>21</mrecordhighavwindday>
-  <mrecordhighavwindmonth>1</mrecordhighavwindmonth>
+  <mrecordhighavwindday>1</mrecordhighavwindday>
+  <mrecordhighavwindmonth>2</mrecordhighavwindmonth>
   <mrecordhighavwindyear>2021</mrecordhighavwindyear>
-  <mrecordhighheatindex>35.0</mrecordhighheatindex>
-  <mrecordhighheatindexday>25</mrecordhighheatindexday>
-  <mrecordhighheatindexday>25</mrecordhighheatindexday>
+  <mrecordhighheatindex>12.9</mrecordhighheatindex>
+  <mrecordhighheatindexday>1</mrecordhighheatindexday>
+  <mrecordhighheatindexday>1</mrecordhighheatindexday>
   <mrecordhighheatindexyear>2021</mrecordhighheatindexyear>
-  <mcoldestdayonrecord>12.6C  on: 16 Jan 2021</mcoldestdayonrecord>
-  <mwarmestnightonrecord>26.9C  on: 25 Jan 2021</mwarmestnightonrecord>
-  <mwarmestdayonrecord>30.2C  on: 11 Jan 2021</mwarmestdayonrecord>
-  <mrecorddailyrainday>15</mrecorddailyrainday>
+  <mcoldestdayonrecord>50.0C  on: 16 Jan 2021</mcoldestdayonrecord>
+  <mwarmestnightonrecord>12.8C  on: 01 Feb 2021</mwarmestnightonrecord>
+  <mwarmestdayonrecord>-50.0C  on: 11 Jan 2021</mwarmestdayonrecord>
+  <mrecorddailyrainday>1</mrecorddailyrainday>
   <dallasextratemp1>-20.0</dallasextratemp1>
   <dallasextratemp2>-20.0</dallasextratemp2>
   <dallasextratemp3>-20.0</dallasextratemp3>
@@ -540,10 +540,10 @@
   <dallasextratemp9hightime>12:01 AM</dallasextratemp9hightime>
   <dallasextratemp10hightime></dallasextratemp10hightime>
   <dallasextrahum>0</dallasextrahum>
-  <dallasextrahumhigh>80</dallasextrahumhigh>
-  <dallasextrahumlow>75</dallasextrahumlow>
-  <dallasextrahumhightime>12:00 AM</dallasextrahumhightime>
-  <dallasextrahumlowtime>5:58 AM</dallasextrahumlowtime>
+  <dallasextrahumhigh>98</dallasextrahumhigh>
+  <dallasextrahumlow>90</dallasextrahumlow>
+  <dallasextrahumhightime>2:18 AM</dallasextrahumhightime>
+  <dallasextrahumlowtime>1:00 AM</dallasextrahumlowtime>
   <dallasextrahum2>0</dallasextrahum2>
   <dallasextrahum2high>0</dallasextrahum2high>
   <dallasextrahum2low>-100</dallasextrahum2low>
@@ -569,7 +569,7 @@
   <lighteningcountlast12hour>0</lighteningcountlast12hour>
   <lighteningcountlast30minutes>0</lighteningcountlast30minutes>
   <lighteningcount>0</lighteningcount>
-  <Solar>2 %</Solar>
+  <Solar>0 %</Solar>
   <wmr91868extrahum>%wmr918/68extrahum%</wmr91868extrahum>
   <wmr91868extrahum2>%wmr918/68extrahum2%</wmr91868extrahum2>
   <wmr91868extrahum3>%wmr918/68extrahum3%</wmr91868extrahum3>
@@ -613,6 +613,6 @@
   <snowseasoncm>0</snowseasoncm>
   <snowmonthcm>0</snowmonthcm>
   <snowtodaycm>0.0</snowtodaycm>
-  <seaconditions>calm-glassy sea</seaconditions>
+  <seaconditions>calm-rippled sea</seaconditions>
  </PARAM>
 </WXDATA>
