@@ -51,7 +51,7 @@
                 <td>average wind: {{ $currentlist['avgspd'] }}</td>
                 <td>wind gust: {{ $currentlist['gstspd'] }}</td>
                 <td>wind dir: {{ $currentlist['dirdeg'] . " " . $currentlist['dirlabel'] }}</td>
-                <td>lightning last 5min: {{ $currentlist['lighteningcountlast5minutes'] }}</td>
+                <td>lightning last hour: {{ $currentlist['lighteningcountlasthour'] }}</td>
             </tr>
             <tr>
                 <td>rain today: {{ $currentlist['dayrn'] }}</td>
@@ -112,19 +112,17 @@
 
         @if ($agent->isMobile())
             <div class="modal-body" id="modal-body">
-                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-38.211&lon=145.190&detailLat=-27.145&detailLon=133.877&width=419&height=420&zoom=5&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-37.930&lon=145.358&detailLat=-37.917&detailLon=145.356&width=419&height=420&zoom=10&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
             </div>
             <div class="modal-body" id="modal-body">
                 <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-27.376&lon=135.794&detailLat=-27.145&detailLon=133.877&width=419&height=420&zoom=3&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
             </div>
         @else
             <div class="modal-body" id="modal-body">
-                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-37.900&lon=145.350&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=6&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-37.930&lon=145.358&detailLat=-37.917&detailLon=145.356&width=640&height=640&zoom=10&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
                 <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-25.635&lon=134.140&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=4&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
             </div>
         @endif
-
-
 </div>
     <code></code>
 </div>

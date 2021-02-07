@@ -8,20 +8,12 @@
 
     <title>{{ config('app.name', 'IMELBO2077' )}}</title>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="{{ asset('js/app.js') }}"></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link rel="stylesheet "href="{{ asset('css/app.css') }}">
 
@@ -38,6 +30,8 @@
 </head>
 
     <body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
         @include('inc.navbar')
 
@@ -63,43 +57,43 @@
             }
         </script>
 
-<script type="text/javascript">
-        const $dropdown = $(".dropdown");
-        const $dropdownToggle = $(".dropdown-toggle");
-        const $dropdownMenu = $(".dropdown-menu");
-        const showClass = "show";
+        <script type="text/javascript">
+            const $dropdown = $(".dropdown");
+            const $dropdownToggle = $(".dropdown-toggle");
+            const $dropdownMenu = $(".dropdown-menu");
+            const showClass = "show";
 
-        $(window).on("load resize", function() {
-          if (this.matchMedia("(min-width: 768px)").matches) {
-            $dropdown.hover(
-              function() {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-              },
-              function() {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
+            $(window).on("load resize", function() {
+              if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                  function() {
+                    const $this = $(this);
+                    $this.addClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "true");
+                    $this.find($dropdownMenu).addClass(showClass);
+                  },
+                  function() {
+                    const $this = $(this);
+                    $this.removeClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "false");
+                    $this.find($dropdownMenu).removeClass(showClass);
+                  }
+                );
+              } else {
+                $dropdown.off("mouseenter mouseleave");
               }
-            );
-          } else {
-            $dropdown.off("mouseenter mouseleave");
-          }
-        });
-    </script>
+            });
+        </script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var url = window.location;
-            $('li.nav-item a[href="'+ url +'"]').parent().addClass('active');
-            $('li.nav-item a').filter(function() {
-                 return this.href == url;
-            }).parent().addClass('active');
-        });
-    </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url = window.location;
+                $('li.nav-item a[href="'+ url +'"]').parent().addClass('active');
+                $('li.nav-item a').filter(function() {
+                     return this.href == url;
+                }).parent().addClass('active');
+            });
+        </script>
 
 
     </body>

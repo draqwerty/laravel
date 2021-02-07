@@ -24,7 +24,7 @@ class CurrentRepository
             'burntime' => $burntime,
             'VPuv' => $VPuv,
             'timeofnextupdate' => $timeofnextupdate,
-            'lighteningcountlast5minutes' => $lighteningcountlast5minutes,
+            'lighteningcountlasthour' => $lighteningcountlasthour,
 
         ];
     }

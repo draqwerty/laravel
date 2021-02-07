@@ -12,8 +12,6 @@
     <title>{{ config('app.name', 'IMELBO2077' )}}</title>
 
     <!-- Scripts -->
-    <script src="{{ config('APP_URL', 'https://weather.sandintheface.com') }}/js/app.js" defer></script>
-    <script type="text/javascript" src="https://gitcdn.xyz/cdn/Yerren/FreshWDL/master/UpperContent.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,6 +28,9 @@
 
 
 	<body onload='initAll();'>
+
+        <script src="{{ config('APP_URL', 'https://weather.sandintheface.com') }}/js/app.js" defer></script>
+        <script type="text/javascript" src="https://gitcdn.xyz/cdn/Yerren/FreshWDL/master/UpperContent.js"></script>
 
         <div class="container-fluid no-gutters">
             @yield('content')
