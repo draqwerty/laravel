@@ -41,4 +41,19 @@ Route::get('/records/2021', 'App\Http\Controllers\PagesController@records2021');
 
 Route::get('/wdlive', 'App\Http\Controllers\PagesController@wdLive');
 
-Route::get('/reports/daily', 'App\Http\Controllers\PagesController@reportsDaily');
+
+Route::get('/reports/aveext/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsAveExtremeMonth');
+
+Route::get('/reports/dailylog', 'App\Http\Controllers\ReportsController@reportsDailyLog');
+Route::get('/reports/daily', 'App\Http\Controllers\ReportsController@reportsDaily');
+Route::get('/reports/weatherdata', 'App\Http\Controllers\ReportsController@reportsWeatherData');
+
+Route::get('/reports/climatedata/currentyear', 'App\Http\Controllers\ReportsController@reportsClimateCurrentYear');
+Route::get('/reports/climatedata/currentmonth', 'App\Http\Controllers\ReportsController@reportsClimateCurrentMonth');
+Route::get('/reports/climatedata/history/{year}', 'App\Http\Controllers\ReportsController@reportsClimateYear');
+Route::get('/reports/climatedata/history/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsClimateMonth');
+
+Route::get('/reports/noaa/currentyear', 'App\Http\Controllers\ReportsController@reportsNoaaCurrentYear');
+Route::get('/reports/noaa/currentmonth', 'App\Http\Controllers\ReportsController@reportsNoaaCurrentMonth');
+Route::get('/reports/noaa/history/{year}', 'App\Http\Controllers\ReportsController@reportsNoaaYear');
+Route::get('/reports/noaa/history/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsNoaaMonth');

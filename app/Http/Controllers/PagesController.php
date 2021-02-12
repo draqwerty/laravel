@@ -269,15 +269,5 @@ class PagesController extends Controller
                                    ->with('menulist', $menuList);
     }
 
-    public function reportsDaily(CurrentRepository $current)
-    {
-        $title = 'daily report';
 
-        $menuList = (new MenuController)->getMenu();
-
-        $currentlist = $current->getCurrentList();
-
-        return view('pages.reports.daily')->with(compact('currentlist','title'))
-                                          ->with('menulist', $menuList);
-    }
 }
