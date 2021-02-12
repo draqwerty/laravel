@@ -13,7 +13,7 @@ class ReportsController extends Controller
     public function reportsClimateCurrentYear(CurrentRepository $current)
     {
         $title = 'climate data current year report';
-        $filename = 'climatedataout.html';
+        $filename = 'climatedatayearout.html';
 
         $menuList = (new MenuController)->getMenu();
 
