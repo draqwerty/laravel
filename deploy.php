@@ -42,7 +42,7 @@ add('rsync', [
 
 // Hosts
 host('production')
-  ->hostname('159.196.4.231')
+  ->hostname('159.196.228.238')
   ->stage('production')
   ->user('root')
   ->set('deploy_path', '/var/www/html');
