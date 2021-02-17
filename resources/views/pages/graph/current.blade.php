@@ -6,6 +6,13 @@
     <br />
     <div class="card" style="width: 32rem;">
         <div class="card-body">
+          <p class="card-text">current 6 hour graph.</p>
+        </div>
+      <img src="{{config('WEATHER_FOLDER', '/wdisplay')}}/curr6hourgraph.gif" class="card-img-bottom" alt="current 24 hour">
+    </div>
+    <br />
+    <div class="card" style="width: 32rem;">
+        <div class="card-body">
           <p class="card-text">current 24 hour graph.</p>
         </div>
       <img src="{{config('WEATHER_FOLDER', '/wdisplay')}}/curr24hourgraph.gif" class="card-img-bottom" alt="current 24 hour">

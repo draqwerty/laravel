@@ -12,8 +12,22 @@
             <div class="card-body">
               <p class="card-text">{{ $day }}-{{ $month }}-{{ $year }}.</p>
             </div>
-            <img src="{{config('WEATHER_FOLDER', '/wdisplay')}}/{{ $year }}{{ $month }}{{ $day }}.gif" class="card-img-bottom" alt="day {{ $year }}{{ $month }}{{ $day }}">
-        </div>
+            <?php
+            if(file_exists('/var/www/html/current/public/wdisplay/'.$year.$month.$day.'.gif'))
+            {
+                ?>
+                <img src="{{config('WEATHER_FOLDER', '/wdisplay')}}/{{ $year }}{{ $month }}{{ $day }}.gif" class="card-img-bottom" alt="day {{ $year }}{{ $month }}{{ $day }}">
+            <?php
+            }
+            else {
+            ?>
+                <div class="card-body">
+                    <p class="card-text">Graph not available</p>
+                </div>
+            <?php
+            }
+            ?>
+            </div>
         <br />
 
     <?php

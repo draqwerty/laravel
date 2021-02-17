@@ -62,25 +62,25 @@ $uomdistance = 'km'; // = 'mi','km'  (for windrun variables)
 //
 // General OR Non Weather Specific/SUN/MOON
 // ========================================
-$time =  '5:19 PM';	// current time
-$date =  '6/2/2021';	// current date
-$sunrise =  '6:40 am';	// sun rise time (make sure you have the correct lat/lon
+$time =  '10:00 AM';	// current time
+$date =  '18/2/2021';	// current date
+$sunrise =  '6:52 am';	// sun rise time (make sure you have the correct lat/lon
 // 		            in view/sun moon)
-$time_minute =  '19';	// Current minute
-$time_hour =  '17';	// Current hour
-$date_day =  '06';	// Current day
+$time_minute =  '00';	// Current minute
+$time_hour =  '10';	// Current hour
+$date_day =  '18';	// Current day
 $date_month =  '02';	// Current month
 $date_year =  '2021';	// Current year
 $monthname =  'February';	// Current month name
-$dayname =  'Saturday';	// Current day name
-$sunset =  '8:25 pm';	// sunset time
-$moonrisedate =  '07/02/21';	// moon rise date
-$moonrise =  '1:45 am';	// moon rise time
-$moonsetdate =  '06/02/21';	// moon set date
-$moonset =  '3:32 pm';	// moon set time
-$moonage =  'Moon age: 23 days,18 hours,47 minutes,33%';	// current age of the moon (days since new moon)
+$dayname =  'Thursday';	// Current day name
+$sunset =  '8:13 pm';	// sunset time
+$moonrisedate =  '17/02/21';	// moon rise date
+$moonrise =  '11:50 am';	// moon rise time
+$moonsetdate =  '17/02/21';	// moon set date
+$moonset =  '11:12 pm';	// moon set time
+$moonage =  'Moon age: 5 days,18 hours,21 minutes,33%';	// current age of the moon (days since new moon)
 $moonphase =  '33%';	// Moon phase %
-$moonphasename = 'Waning Crescent Moon'; // 10.36z addition
+$moonphasename = 'Waxing Crescent Moon'; // 10.36z addition
 $marchequinox =  '09:38 UTC 20 March 2021';	// March equinox date
 $junesolstice =  '03:33 UTC 21 June 2021';	// June solstice date
 $sepequinox =  '19:22 UTC 22 September 2021';	// September equinox date
@@ -89,26 +89,26 @@ $moonperihel =  '17:15 UTC 3 January 2022';	// Next Moon perihel date
 $moonaphel =  '02:08 UTC 5 July 2021';	// Next moon perihel date
 $moonperigee =  '05:15 UTC 2 March 2021';	// Next moon perigee date
 $moonapogee =  '10:22 UTC 18 February 2021';	// Next moon apogee date
-$newmoon =  '05:01 UTC 13 January 2021';	// Date/time of the next/last new moon
-$nextnewmoon =  '19:06 UTC 11 February 2021';	// Date/time of the next new moon for next month
-$firstquarter =  '21:02 UTC 20 January 2021';	// Date/time of the next/last first quarter moon
-$lastquarter =  '17:38 UTC 4 February 2021';	// Date/time of the next/last last quarter moon
-$fullmoon =  '19:17 UTC 28 January 2021';	// Date/time of the next/last full moon
-$fullmoondate =  '28 January 2021';	// Date of the next/last full moon (date only)
-$suneclipse =  '04 December 2021 19:16:04 4%';	// Next sun eclipse
-$mooneclipse =  '26 May 2021 21:19:07 101%';	// Next moon eclipse date
+$newmoon =  '19:06 UTC 11 February 2021';	// Date/time of the next/last new moon
+$nextnewmoon =  '10:22 UTC 13 March 2021';	// Date/time of the next new moon for next month
+$firstquarter =  '18:48 UTC 19 February 2021';	// Date/time of the next/last first quarter moon
+$lastquarter =  '01:31 UTC 6 March 2021';	// Date/time of the next/last last quarter moon
+$fullmoon =  '08:18 UTC 27 February 2021';	// Date/time of the next/last full moon
+$fullmoondate =  '27 February 2021';	// Date of the next/last full moon (date only)
+$suneclipse =  '04 December 2021 7:16 pm 4%';	// Next sun eclipse
+$mooneclipse =  '26 May 2021 9:19 pm 101%';	// Next moon eclipse date
 $easterdate =  '4 April 2021';	// Next easter date
 $chinesenewyear =  '12 February 2021 ()';	// Chinese new year
-$hoursofpossibledaylight =  '13:45';	// Total hours/minutes of possible daylight for today
+$hoursofpossibledaylight =  '13:21';	// Total hours/minutes of possible daylight for today
 //
 $weatherreport =  'Clear';	// current weather conditions from selected METAR
 $stationaltitude =  '266';	// Station altitude, feet, as set in the units setup
 // this under setup)
 $stationlatitude =  '-37:00:41';	// Latitude (from the sun moon rise/set setup)
 $stationlongitude =  '-145:21:19';	// Longtitude (from the sun moon rise/set setup)
-$windowsuptime = '21 Days 23 Hours 36 Minutes 52 Seconds'; // uptime for windows on weather pc
-$freememory = '15.58GB'; // amount of free memory on the pc
-$Startimedate = '3:49:00 PM 6/02/2021'; // Time/date WD was started
+$windowsuptime = '6 Days 16 Hours 49 Minutes 55 Seconds'; // uptime for windows on weather pc
+$freememory = '16.35GB'; // amount of free memory on the pc
+$Startimedate = '12:06:55 PM 17/02/2021'; // Time/date WD was started
 
 /*
 $NOAAEvent = 'NO CURRENT ADVISORIES'; // NOAA Watch/Warning/Advisory
@@ -120,7 +120,7 @@ $wdversiononly = '10.37S';
 $wdbuild   = '122';       // Weather Display build number you are running
 $noaacityname =  'Belgrave';	// City name,from the noaa setup (in the av/ext setup)
 // 
-$timeofnextupdate =  '5:20 pm';	// Time of next Update/Upload of the weather data to your web page (based on the web table update 
+$timeofnextupdate =  '10:01 am';	// Time of next Update/Upload of the weather data to your web page (based on the web table update 
 // 
 $heatcolourword =  'Comfortable';	// How hot/cold it feels at the moment, based on the humidex, used with the conditionscolour.jpg 
 // 
@@ -129,29 +129,29 @@ $heatcolourword =  'Comfortable';	// How hot/cold it feels at the moment, based 
 // ====================
 // Current:
 // --------
-$temperature =  '20.5';	// temperature
-$tempnodp = '20'; // temperature, no decimal place
-$humidity =  '55';	// humidity
-$dewpt =  '11.1';	// dew point
-$maxtemp =  '20.6';	// today's maximum temperature
-$maxtempt =  '4:55 PM';	// time this occurred
-$mintemp =  '15.7';	// today's minimum temperature
-$mintempt =  '2:12 AM';	// time this occurred
+$temperature =  '22.5';	// temperature
+$tempnodp = '22'; // temperature, no decimal place
+$humidity =  '49';	// humidity
+$dewpt =  '11.2';	// dew point
+$maxtemp =  '22.6';	// today's maximum temperature
+$maxtempt =  '9:54 AM';	// time this occurred
+$mintemp =  '16.9';	// today's minimum temperature
+$mintempt =  '3:35 AM';	// time this occurred
 $feelslike =  '25';	// Shows heat index or humidex or windchill (if less than 16oC)
 
-$heati =  '24.6';	// current heat index
+$heati =  '25.0';	// current heat index
 $heatinodp =  '25';	// current heat index,no decimal place
-$windch =  '20.5';	// current wind-chill
-$windchnodp =  '21';	// current wind-chill, no decimal place
-$humidexfaren =  '72.2';	// Humidex value in oF
-$humidexcelsius =  '22.3';	// Humidex value in oC
+$windch =  '22.5';	// current wind-chill
+$windchnodp =  '23';	// current wind-chill, no decimal place
+$humidexfaren =  '75.9';	// Humidex value in oF
+$humidexcelsius =  '24.4';	// Humidex value in oC
 
-$apparenttemp =  '20.9';	// Apparent temperature
-$apparentsolartemp =  '25.2';	// Apparent temperature in the sun (you need a solar sensor)
-$apparenttempc =  '20.9';	// Apparent temperature, °C
-$apparentsolartempc =  '25.2';	// Apparent temperature in the sun, °C (you need a solar sensor)
-$apparenttempf =  '69.6';	// Apparent temperature, °F
-$apparentsolartempf =  '77.4';	// Apparent temperature in the sun, °F (you need a solar sensor)
+$apparenttemp =  '21.4';	// Apparent temperature
+$apparentsolartemp =  '27.0';	// Apparent temperature in the sun (you need a solar sensor)
+$apparenttempc =  '21.4';	// Apparent temperature, °C
+$apparentsolartempc =  '27.0';	// Apparent temperature in the sun, °C (you need a solar sensor)
+$apparenttempf =  '70.4';	// Apparent temperature, °F
+$apparentsolartempf =  '80.6';	// Apparent temperature in the sun, °F (you need a solar sensor)
 // 
 $WUmaxtemp = '0.0';	// Todays average max temperature from the selected Wunderground almanac station
 $WUmintemp = '0.0';	// Todays average min temperature from the selected Wunderground almanac station
@@ -164,51 +164,51 @@ $WUmintempryr = '0';	// year that it occured
 // 
 // Yesterday:
 // ----------
-$tempchangehour =  '+0.6';	// Temperature change in the last hour
-$maxtempyest =  '25.6';	// Yesterday's max temperature
-$maxtempyestt =  '12:44 PM';	// Time of yesterday's max temperature
-$mintempyest =  '16.1';	// Yesterday's min temperature
-$mintempyestt =  '7:05 AM';	// Time of yesterday's min temperature
+$tempchangehour =  '+1.3';	// Temperature change in the last hour
+$maxtempyest =  '30.2';	// Yesterday's max temperature
+$maxtempyestt =  '3:00 PM';	// Time of yesterday's max temperature
+$mintempyest =  '19.5';	// Yesterday's min temperature
+$mintempyestt =  '9:01 AM';	// Time of yesterday's min temperature
 // 
 // 
 // Trends:
 // -------
-$temp24hoursago =  '24.1';	// The temperature 24 hours ago
-$humchangelasthour =  '-9';	// Humidity change last hour
-$dewchangelasthour =  '-1.7';	// Dew point change last hour
-$barochangelasthour =  '0.0';	// Baro change last hour
+$temp24hoursago =  '22.3';	// The temperature 24 hours ago
+$humchangelasthour =  '-2';	// Humidity change last hour
+$dewchangelasthour =  '+0.6';	// Dew point change last hour
+$barochangelasthour =  '-0.2';	// Baro change last hour
 // 
 // Wind
 // ====
 // Current:
 // --------
 // 
-$avgspd =  '2.2';	// average wind speed (current)
-$gstspd =  '3.2';	// current/gust wind speed
-$maxgst =  '25.9';	// today's maximum wind speed
-$maxgstt =  '7:28 AM';	// time this occurred
-$maxgsthr =  '12.2 kmh  NE';	// maximum gust last hour
-$dirdeg =  '22';	// wind direction (degrees)
-$dirlabel =  'NNE';	// wind direction (NNE etc)
-//$maxgustlastimediatehourtime =  '16:45';	// 16:45  time that the max gust last prior 1 hour occured
-$avwindlastimediate10 =  '0.7';	// Average wind for the last immediate 10 minute period
-// $avdir10minute =  '351';	// average ten minute wind direction (degrees)
+$avgspd =  '11.1';	// average wind speed (current)
+$gstspd =  '5.8';	// current/gust wind speed
+$maxgst =  '30.2';	// today's maximum wind speed
+$maxgstt =  '9:12 AM';	// time this occurred
+$maxgsthr =  '30.2 kmh  N ';	// maximum gust last hour
+$dirdeg =  '332';	// wind direction (degrees)
+$dirlabel =  'NNW';	// wind direction (NNE etc)
+//$maxgustlastimediatehourtime =  '9:12';	// 9:12  time that the max gust last prior 1 hour occured
+$avwindlastimediate10 =  '8.7';	// Average wind for the last immediate 10 minute period
+// $avdir10minute =  '350';	// average ten minute wind direction (degrees)
 
-$beaufortnum ='0'; //Beaufort wind force number
-$currbftspeed = '1 bft'; //Current Beaufort wind speed
+$beaufortnum ='2'; //Beaufort wind force number
+$currbftspeed = '2 bft'; //Current Beaufort wind speed
 
-$bftspeedtext = 'Light Air'; //Beaufort scale in text (i.e Fresh Breeze)
+$bftspeedtext = 'Light Breeze'; //Beaufort scale in text (i.e Fresh Breeze)
 // 
 // 
 // Baromometer
 // ===========
 // Current:
 // --------
-$baro = '1000.0';  // current barometer
-$baroinusa2dp =  '29.53 inches';	// Current barometer reading in inches, 2 decimal places only.
-$trend =  '+0.1';	// amount of change in the last hour
+$baro = '1022.2';  // current barometer
+$baroinusa2dp =  '30.19 inches';	// Current barometer reading in inches, 2 decimal places only.
+$trend =  '-0.2';	// amount of change in the last hour
 $pressuretrendname =  'Steady';	// pressure trend (i.e. 'falling'), last hour
-$pressuretrendname3hour =  'Rising slowly';	// pressure trend (i.e. 'falling'), last 3 hours
+$pressuretrendname3hour =  'Rising';	// pressure trend (i.e. 'falling'), last 3 hours
 
 $vpforecasttext = '---';	// Forecast text from the Davis VP
 // 
@@ -218,15 +218,15 @@ $vpforecasttext = '---';	// Forecast text from the Davis VP
 // Current:
 // --------
 $dayrn =  '  0.000';	// today's rain
-$monthrn =  '1.561';	// rain so far this month
-$yearrn =  '118.2';	// rain so far this year
-$dayswithnorain =  '1';	// Consecutative days with no rain
-$dayswithrain =  '0';	// Days with rain for the month
-$dayswithrainyear =  '11';	// Days with rain for the year
+$monthrn =  '12.600';	// rain so far this month
+$yearrn =  '129.2';	// rain so far this year
+$dayswithnorain =  '14';	// Consecutative days with no rain
+$dayswithrain =  '5';	// Days with rain for the month
+$dayswithrainyear =  '29';	// Days with rain for the year
 $currentrainratehr =  '0.00';	// Current rain rate, mm/hr (or in./hr)
 $maxrainrate =  '0.0';	// Max rain rate,for the day, mm/min (or in./min)
 $maxrainratehr =  '0.000';	// Max rain rate,for the day, mm/hr (or in.mm)
-$maxrainratetime =  '09:00 AM';	// Time that occurred
+$maxrainratetime =  '00:00 AM';	// Time that occurred
 // Yesterday:
 // ----------
 $yesterdayrain =  '0.0';	// Yesterday rain
@@ -237,18 +237,18 @@ $vpstormrain = '0.0';           //Davis VP Storm rain value
 // 
 // Sunshine/Solar/ET
 // =================
-$VPsolar =  '327';	//  Solar energy number (W/M2)
-$VPuv =  '4.5';	// UV number 
-$highsolar =  '1028';	// Daily high solar (for Davis VP and Grow stations)
-$highuv =  '13.8';	// Daily high UV (for Davis VP stations)
-$currentsolarpercent =  '55';	// Current solar percent for stations with a temperature solar sensor (like the dallas 1 wire)
-$highsolartime =  '11:40 AM';	// Time that the daily high solar occured
+$VPsolar =  '509';	//  Solar energy number (W/M2)
+$VPuv =  '7.0';	// UV number 
+$highsolar =  '509';	// Daily high solar (for Davis VP and Grow stations)
+$highuv =  '7.0';	// Daily high UV (for Davis VP stations)
+$currentsolarpercent =  '83';	// Current solar percent for stations with a temperature solar sensor (like the dallas 1 wire)
+$highsolartime =  '9:59 AM';	// Time that the daily high solar occured
 $lowsolartime =  '12:00 AM';	// Time that the daily low solar occured
-$highuvtime =  '11:40 AM';	// Time that the daily high UV occured
+$highuvtime =  '9:58 AM';	// Time that the daily high UV occured
 $lowuvtime =  '12:00 AM';	// Time that the daily low UV occured
-$highuvyest =  '14.0';	// Yesterday's high UV
-$highuvyesttime =  '12:39 PM';	// Time of yesterday's high UV
-$burntime =  '25';	// Time (minutes) to burn (normal skin) at the current UV rate, from the Davis VP with UV sensor
+$highuvyest =  '12.4';	// Yesterday's high UV
+$highuvyesttime =  '2:17 PM';	// Time of yesterday's high UV
+$burntime =  '16';	// Time (minutes) to burn (normal skin) at the current UV rate, from the Davis VP with UV sensor
 // 
 // the solar setup.
 // 
@@ -263,8 +263,8 @@ $burntime =  '25';	// Time (minutes) to burn (normal skin) at the current UV rat
 // 
 // for current month to date:
 // 
-$mrecordwindgust =  '33.9';	// All time record high wind gust
-$mrecordhighgustday =  '5';	// Day of record high wind gust
+$mrecordwindgust =  '35.2';	// All time record high wind gust
+$mrecordhighgustday =  '11';	// Day of record high wind gust
 // 
 // 
 // Snow
@@ -277,8 +277,8 @@ $snowseasoncm = '0';	// Snow for season you have entered under input daily weath
 $snowmonthcm = '0';	// Snow for month you have entered under input daily weather, cm
 $snowtodaycm = '0.0';	// Snow for today you have entered under input daily weather, cm
 $snowyesterday = '0';	// Yesterdays' snow
-$snowheight = '127';	// Estimated height snow will fall at
-$snowheightnew = '2759';	// Estimated height snow will fall at, new formula
+$snowheight = '128';	// Estimated height snow will fall at
+$snowheightnew = '2864';	// Estimated height snow will fall at, new formula
 // 
 $snownowin = '0.00';	// Current snow depth, inches.
 $snownowcm = '0.0';	// Current snow depth, cm.
@@ -289,173 +289,173 @@ $snowdaysthisyear = '0';	// Days with snow this year
 //
 // tags needed for trends-inc.php
 //
-$temp0minuteago = '20.5';  // ****this one is needed for all the others to work
-$wind0minuteago = '1.9';
-$gust0minuteago = '5.6';
+$temp0minuteago = '22.5';  // ****this one is needed for all the others to work
+$wind0minuteago = '7.4';
+$gust0minuteago = '25.9';
 $dir0minuteago = ' N ';
-$hum0minuteago = '57';
-$dew0minuteago = '11.7';
-$baro0minuteago = '1000.0';
+$hum0minuteago = '49';
+$dew0minuteago = '11.2';
+$baro0minuteago = '1022.2';
 $rain0minuteago = '0.0';
-$VPsolar0minuteago = '75';
-$VPuv0minuteago = '4.5';
+$VPsolar0minuteago = '82';
+$VPuv0minuteago = '7.0';
 
-$temp5minuteago = '20.5';  
-$wind5minuteago = '0.0';
-$gust5minuteago = '3.7';
+$temp5minuteago = '22.5';  
+$wind5minuteago = '5.6';
+$gust5minuteago = '18.5';
 $dir5minuteago = ' N ';
-$hum5minuteago = '58';
-$dew5minuteago = '12.0';
-$baro5minuteago = '1000.0';
+$hum5minuteago = '50';
+$dew5minuteago = '11.6';
+$baro5minuteago = '1022.3';
 $rain5minuteago = '0.0';
-$VPsolar5minuteago = '16';
-$VPuv5minuteago = '1.4';
+$VPsolar5minuteago = '81';
+$VPuv5minuteago = '6.7';
 
-$temp10minuteago = '20.6';  
-$wind10minuteago = '1.9';
-$gust10minuteago = '5.6';
-$dir10minuteago = ' NE';
-$hum10minuteago = '57';
-$dew10minuteago = '11.8';
-$baro10minuteago = '1000.0';
+$temp10minuteago = '22.3';  
+$wind10minuteago = '5.6';
+$gust10minuteago = '20.4';
+$dir10minuteago = ' N ';
+$hum10minuteago = '50';
+$dew10minuteago = '11.4';
+$baro10minuteago = '1022.3';
 $rain10minuteago = '0.0';
-$VPsolar10minuteago = '22';
-$VPuv10minuteago = '2.0';
+$VPsolar10minuteago = '78';
+$VPuv10minuteago = '6.3';
 
-$temp15minuteago = '20.6';  
-$wind15minuteago = '0.0';
-$gust15minuteago = '1.9';
-$dir15minuteago = ' NE';
-$hum15minuteago = '63';
-$dew15minuteago = '13.3';
-$baro15minuteago = '1000.0';
+$temp15minuteago = '22.1';  
+$wind15minuteago = '11.1';
+$gust15minuteago = '18.5';
+$dir15minuteago = ' N ';
+$hum15minuteago = '49';
+$dew15minuteago = '10.9';
+$baro15minuteago = '1022.3';
 $rain15minuteago = '0.0';
-$VPsolar15minuteago = '34';
-$VPuv15minuteago = '2.9';
+$VPsolar15minuteago = '72';
+$VPuv15minuteago = '5.7';
 
-$temp20minuteago = '20.6';  
+$temp20minuteago = '21.9';  
 $wind20minuteago = '3.7';
-$gust20minuteago = '3.7';
-$dir20minuteago = 'WSW';
-$hum20minuteago = '59';
-$dew20minuteago = '12.3';
-$baro20minuteago = '1000.0';
+$gust20minuteago = '7.4';
+$dir20minuteago = ' N ';
+$hum20minuteago = '50';
+$dew20minuteago = '11.0';
+$baro20minuteago = '1022.4';
 $rain20minuteago = '0.0';
-$VPsolar20minuteago = '25';
-$VPuv20minuteago = '2.2';
+$VPsolar20minuteago = '65';
+$VPuv20minuteago = '5.0';
 
-$temp30minuteago = '20.2';  
-$wind30minuteago = '3.7';
-$gust30minuteago = '5.6';
-$dir30minuteago = ' N ';
-$hum30minuteago = '61';
-$dew30minuteago = '12.4';
-$baro30minuteago = '1000.0';
+$temp30minuteago = '21.7';  
+$wind30minuteago = '7.4';
+$gust30minuteago = '18.5';
+$dir30minuteago = ' NW';
+$hum30minuteago = '50';
+$dew30minuteago = '10.8';
+$baro30minuteago = '1022.3';
 $rain30minuteago = '0.0';
-$VPsolar30minuteago = '31';
-$VPuv30minuteago = '2.9';
+$VPsolar30minuteago = '36';
+$VPuv30minuteago = '2.0';
 
-$temp45minuteago = '20.1';  
-$wind45minuteago = '1.9';
-$gust45minuteago = '1.9';
+$temp45minuteago = '21.4';  
+$wind45minuteago = '13.0';
+$gust45minuteago = '22.2';
 $dir45minuteago = ' N ';
-$hum45minuteago = '63';
-$dew45minuteago = '12.8';
-$baro45minuteago = '1000.0';
+$hum45minuteago = '50';
+$dew45minuteago = '10.5';
+$baro45minuteago = '1022.4';
 $rain45minuteago = '0.0';
-$VPsolar45minuteago = '23';
-$VPuv45minuteago = '2.4';
+$VPsolar45minuteago = '21';
+$VPuv45minuteago = '1.2';
 
-$temp60minuteago = '19.9';  
-$wind60minuteago = '1.9';
-$gust60minuteago = '3.7';
+$temp60minuteago = '21.2';  
+$wind60minuteago = '5.6';
+$gust60minuteago = '11.1';
 $dir60minuteago = 'NNW';
-$hum60minuteago = '66';
-$dew60minuteago = '13.4';
-$baro60minuteago = '1000.0';
+$hum60minuteago = '51';
+$dew60minuteago = '10.7';
+$baro60minuteago = '1022.4';
 $rain60minuteago = '0.0';
-$VPsolar60minuteago = '22';
-$VPuv60minuteago = '2.6';
+$VPsolar60minuteago = '11';
+$VPuv60minuteago = '0.6';
 
-$temp75minuteago = '19.9';  
-$wind75minuteago = '0.0';
-$gust75minuteago = '3.7';
-$dir75minuteago = 'NNW';
-$hum75minuteago = '65';
-$dew75minuteago = '13.1';
-$baro75minuteago = '1000.0';
+$temp75minuteago = '21.0';  
+$wind75minuteago = '5.6';
+$gust75minuteago = '14.8';
+$dir75minuteago = 'WNW';
+$hum75minuteago = '51';
+$dew75minuteago = '10.5';
+$baro75minuteago = '1022.3';
 $rain75minuteago = '0.0';
-$VPsolar75minuteago = '24';
-$VPuv75minuteago = '3.0';
+$VPsolar75minuteago = '14';
+$VPuv75minuteago = '0.6';
 
-$temp90minuteago = '20.0';  
-$wind90minuteago = '3.7';
-$gust90minuteago = '5.6';
-$dir90minuteago = ' N ';
-$hum90minuteago = '62';
-$dew90minuteago = '12.5';
-$baro90minuteago = '999.8';
+$temp90minuteago = '20.9';  
+$wind90minuteago = '1.9';
+$gust90minuteago = '9.3';
+$dir90minuteago = 'NNW';
+$hum90minuteago = '53';
+$dew90minuteago = '11.0';
+$baro90minuteago = '1022.0';
 $rain90minuteago = '0.0';
-$VPsolar90minuteago = '23';
-$VPuv90minuteago = '2.7';
+$VPsolar90minuteago = '14';
+$VPuv90minuteago = '0.5';
 
-$temp105minuteago = '19.4';  
-$wind105minuteago = '1.9';
-$gust105minuteago = '3.7';
-$dir105minuteago = 'NNW';
-$hum105minuteago = '66';
-$dew105minuteago = '12.9';
-$baro105minuteago = '999.9';
+$temp105minuteago = '20.8';  
+$wind105minuteago = '3.7';
+$gust105minuteago = '5.6';
+$dir105minuteago = ' NE';
+$hum105minuteago = '53';
+$dew105minuteago = '10.9';
+$baro105minuteago = '1021.9';
 $rain105minuteago = '0.0';
-$VPsolar105minuteago = '23';
-$VPuv105minuteago = '2.6';
+$VPsolar105minuteago = '28';
+$VPuv105minuteago = '0.9';
 
-$temp120minuteago = '19.0';  
-$wind120minuteago = '0.0';
-$gust120minuteago = '1.9';
-$dir120minuteago = ' NW';
-$hum120minuteago = '71';
-$dew120minuteago = '13.6';
-$baro120minuteago = '999.9';
+$temp120minuteago = '20.6';  
+$wind120minuteago = '3.7';
+$gust120minuteago = '24.1';
+$dir120minuteago = ' N ';
+$hum120minuteago = '53';
+$dew120minuteago = '10.7';
+$baro120minuteago = '1022.0';
 $rain120minuteago = '0.0';
-$VPsolar120minuteago = '15';
-$VPuv120minuteago = '1.9';
+$VPsolar120minuteago = '19';
+$VPuv120minuteago = '0.4';
 
 $VPet = '0.0';
-$VPetmonth = '10.2';
+$VPetmonth = '39.9';
 $dateoflastrainalways = '5/2/2021';
-$highbaro = '1000.1 ';
-$highbarot = '2:44 PM';
-$highsolaryest = '1110.0';
-$highsolaryesttime = '12:39 PM';
+$highbaro = '1022.4 ';
+$highbarot = '8:54 AM';
+$highsolaryest = '1444.0';
+$highsolaryesttime = '1:35 PM';
 $hourrn = '0.0';
-$maxaverageyest = '19.1';
-$maxaverageyestt = '12:24 PM';
-$maxavgdirectionletter = 'N';
-$maxavgspd = '11.1';
-$maxavgspdt = '1:43 PM';
-$maxbaroyest = '1003.0 ';
-$maxbaroyestt = '2:16 AM';
-$maxgstdirectionletter = 'N';
-$maxgustyest = '33.8 kmh NNE';
-$maxgustyestt = '12:24 PM';
-$mcoldestdayonrecord = '14.8C  on: 02 Feb 2021';
-$mcoldestnightonrecord = '12.4C  on: 03 Feb 2021';
-$minchillyest = '16.1';
-$minchillyestt = '7:05 AM';
-$minwindch = '15.7';
-$minwindcht = '2:12 AM';
+$maxaverageyest = '9.3';
+$maxaverageyestt = '11:50 AM';
+$maxavgdirectionletter = 'NNE';
+$maxavgspd = '13.3';
+$maxavgspdt = '9:15 AM';
+$maxbaroyest = '1022.4 ';
+$maxbaroyestt = '9:35 AM';
+$maxgstdirectionletter = '  N';
+$maxgustyest = '20.4 kmh SSE';
+$maxgustyestt = '6:33 PM';
+$mcoldestdayonrecord = '14.1C  on: 08 Feb 2021';
+$mcoldestnightonrecord = '12.1C  on: 14 Feb 2021';
+$minchillyest = '19.5';
+$minchillyestt = '9:01 AM';
+$minwindch = '16.9';
+$minwindcht = '3:35 AM';
 $mrecordhighavwindday = '5';
 $mrecordhighavwindmonth = '2';
 $mrecordhighavwindyear = '2021';
-$mrecordhighbaro = '1018.6';
-$mrecordhighbaroday = '2';
+$mrecordhighbaro = '1022.4';
+$mrecordhighbaroday = '18';
 $mrecordhighbaromonth = '2';
 $mrecordhighbaroyear = '2021';
 $mrecordhighgustmonth = '2';
 $mrecordhighgustyear = '2021';
-$mrecordhightemp = '28.4';
-$mrecordhightempday = '4';
+$mrecordhightemp = '30.2';
+$mrecordhightempday = '17';
 $mrecordhightempmonth = '2';
 $mrecordhightempyear = '2021';
 $mrecordlowchill = '9.5';
@@ -467,15 +467,15 @@ $mrecordlowtempday = '3';
 $mrecordlowtempmonth = '2';
 $mrecordlowtempyear = '2021';
 $mrecordwindspeed = '19.1';
-$mwarmestdayonrecord = '23.0C  on: 05 Feb 2021';
+$mwarmestdayonrecord = '26.2C  on: 11 Feb 2021';
 $mwarmestnightonrecord = '22.4C  on: 05 Feb 2021';
 $raincurrentweek = '0.0';
-$raintodatemonthago = '2.6';
+$raintodatemonthago = '55.8';
 $raintodateyearago = '0.0';
 $timeoflastrainalways = ' 8:24 PM';
-$windruntodatethismonth = '320.08 km';
-$windruntodatethisyear = '1747.73 km';
-$windruntoday = '52.94';
+$windruntodatethismonth = '903.08 km';
+$windruntodatethisyear = '2330.54 km';
+$windruntoday = '34.97';
 $yesterdaydaviset = '0.0';
 $yrecordhighavwindday = '5';
 $yrecordhighavwindmonth = '2';
@@ -484,7 +484,7 @@ $yrecordhighbaro = '1028.8';
 $yrecordhighbaroday = '8';
 $yrecordhighbaromonth = '1';
 $yrecordhighbaroyear = '2021';
-$yrecordhighgustday = '5';
+$yrecordhighgustday = '11';
 $yrecordhighgustmonth = '2';
 $yrecordhighgustyear = '2021';
 $yrecordhightemp = '36.4';
@@ -499,10 +499,10 @@ $yrecordlowtemp = '7.8';
 $yrecordlowtempday = '15';
 $yrecordlowtempmonth = '1';
 $yrecordlowtempyear = '2021';
-$yrecordwindgust = '33.9';
+$yrecordwindgust = '35.2';
 $yrecordwindspeed = '19.1';
-$daysTmaxGT30C = '0';
-$daysTmaxGT25C = '2';
+$daysTmaxGT30C = '1';
+$daysTmaxGT25C = '7';
 $daysTminLT0C = '0';
 $daysTminLTm15C = '0';
 
@@ -563,16 +563,16 @@ $daysTminLTm15C = '0';
    $current_summary = preg_replace('|/|',', ',$current_summary);
 //  
 //  
-$cloudheightfeet =  '3854';	// Estimated cloud base height, feet, (based on dew point, and you height above sea  level...enter
-$cloudheightmeters =  '1175';	// Estimated cloud base height, metres, (based on dew point, and you height above sea
+$cloudheightfeet =  '4635';	// Estimated cloud base height, feet, (based on dew point, and you height above sea  level...enter
+$cloudheightmeters =  '1413';	// Estimated cloud base height, metres, (based on dew point, and you height above sea
 
 // end of stock testtags.txt
 
 // ----------------------------------------------------------------------------------------------------
 // begin mchallis tags added to testtags.txt for printable flyer
-$maxgsthrtime = '16:45';        // time that the max gust last prior 1 hour occured
-$minbaroyest  = '995.3 ';
-$minbaroyestt = '7:09 PM';
+$maxgsthrtime = '9:12';        // time that the max gust last prior 1 hour occured
+$minbaroyest  = '1018.9 ';
+$minbaroyestt = '5:26 PM';
 $mrecordlowbaro = '995.3';
 $mrecordlowbaroday = '5';
 $mrecordlowbaromonth = '2';
@@ -591,22 +591,22 @@ $lighteningcountlasthournextstorm = '0';
 $lighteningcountlastminutenextstorm = '0';
 $lighteningcountlast12hournextstorm = '0';
 $lighteningcountlast30minutesnextstorm = '0';
-$timeofdaygreeting = 'Afternoon';
-$avwindlastimediate60 = '2.1'; // average wind speed
-$avwindlastimediate120 = '2.0'; // average wind speed
+$timeofdaygreeting = 'Morning';
+$avwindlastimediate60 = '6.9'; // average wind speed
+$avwindlastimediate120 = '5.7'; // average wind speed
 $currentmonthaveragerain = '---'; // average rain for current month
 //
 // version 5.00+ 
-$avwindlastimediate15 = '0.9'; // average wind speed
-$avwindlastimediate30 = '1.5'; // average wind speed
-$todayhihumidex = '23.7'; //daily high humidex
-$todaylohumidex = '17.5'; //Daily low Humidex
+$avwindlastimediate15 = '6.8'; // average wind speed
+$avwindlastimediate30 = '6.5'; // average wind speed
+$todayhihumidex = '25.4'; //daily high humidex
+$todaylohumidex = '20.6'; //Daily low Humidex
 //Version 5.02
 $dayornight = 'Day'; // Day or night flag
 
 //Version 6.20
-$tempchangelasthourfaren = '+1.1'; //For snow prediction
-$abshum = '6.31'; //For snow prediction
+$tempchangelasthourfaren = '+2.3'; //For snow prediction
+$abshum = '6.29'; //For snow prediction
 $maxtemp4today = '---'; // max from station's records
 $mintemp4today = '---'; // min from station's records
 $maxtemp4todayyr = '2021'; // max year from station's records
@@ -641,7 +641,7 @@ $avsnowdecnow = '---';
 // For Temperature Trend Chart, you Need to add the following to your testtags file if they don't yet exist:
 
 $avtempjannow = '17.6';
-$avtempfebnow = '17.3';
+$avtempfebnow = '17.6';
 $avtempmarnow = '0.0';
 $avtempaprnow = '0.0';
 $avtempmaynow = '0.0';
@@ -653,7 +653,7 @@ $avtempoctnow = '0.0';
 $avtempnovnow = '0.0';
 $avtempdecnow = '15.0';
 $avtempjan = '17.6';//Average temperature for january from your data
-$avtempfeb = '17.3';//Average temperature for february from your data
+$avtempfeb = '17.6';//Average temperature for february from your data
 $avtempmar = '0.0';//Average temperature for march from your data
 $avtempapr = '0.0';//Average temperature for april from your data
 $avtempmay = '0.0';//Average temperature for may from your data
@@ -668,30 +668,30 @@ $avtempdec = '15.0';//Average temperature for december from your data
 //For the Rain Trending Chart, you Need to add the following to your testtags file if they don't yet exist:
 
 //Start Rain Trending
-$avrainjan = '38.9';
-$avrainfeb = '149.1';
-$avrainmar = '111.1';
-$avrainapr = '111.1';
-$avrainmay = '60.7';
+$avrainjan = '116.6';
+$avrainfeb = '0.0';
+$avrainmar = '0.0';
+$avrainapr = '0.0';
+$avrainmay = '0.0';
 $avrainjun = '0.0';
 $avrainjul = '0.0';
 $avrainaug = '0.0';
 $avrainsep = '0.0';
-$avrainoct = '63.0';
-$avrainnov = '63.0';
-$avraindec = '145.6';
+$avrainoct = '0.0';
+$avrainnov = '0.0';
+$avraindec = '2.3';
 
 $avrainjannow = '116.6';
-$avrainfebnow = '1.6';
-$avrainmarnow = '0.0';
-$avrainaprnow = '0.0';
-$avrainmaynow = '0.0';
-$avrainjunnow = '0.0';
-$avrainjulnow = '0.0';
-$avrainaugnow = '0.0';
-$avrainsepnow = '0.0';
-$avrainoctnow = '0.0';
-$avrainnovnow = '0.0';
+$avrainfebnow = '12.6';
+$avrainmarnow = '---';
+$avrainaprnow = '---';
+$avrainmaynow = '---';
+$avrainjunnow = '---';
+$avrainjulnow = '---';
+$avrainaugnow = '---';
+$avrainsepnow = '---';
+$avrainoctnow = '---';
+$avrainnovnow = '---';
 $avraindecnow = '2.3';
 //End Rain Trending
 // end of relayweather tags
@@ -705,7 +705,7 @@ $warmestdayonrecord = '33.8 C  on: 24 Jan 2021';
 $warmestnightonrecord = '26.9C  on: 25 Jan 2021';
 $coldestdayonrecord = '12.6C  on: 16 Jan 2021';
 $coldestnightonrecord = '9.2C  on: 16 Jan 2021';
-$recordwindgust = '33.9';
+$recordwindgust = '35.2';
 $recordwindspeed = '19.1';
 $recordhighwindrun = '95.3';
 $recorddailyrain = '11.0';
@@ -733,7 +733,7 @@ $recordlowchillmonth = '12';
 $recordlowchillday = '29';
 $recordlowchillyear = '2020';
 $recordhighgustmonth = '2';
-$recordhighgustday = '5';
+$recordhighgustday = '11';
 $recordhighgustyear = '2021';
 $recordhighavwindmonth = '2';
 $recordhighavwindday = '5';
@@ -835,9 +835,9 @@ $yrecordhighuvmonth = '1';
 $yrecordhighuvday = '19';
 $yrecordhighuvyear = '2021';
 
-$mrecordhighheatindex = '28.1';
+$mrecordhighheatindex = '30.0';
 $mrecordhighheatindexmonth = '2';
-$mrecordhighheatindexday = '4';
+$mrecordhighheatindexday = '17';
 $mrecordhighheatindexyear = '2021';
 $mrecordhighwindrun = '95.3';
 $mrecordhighwindrunmth = '2';
@@ -849,7 +849,7 @@ $mrecordrainrate = '0.0';
 $mrecorddayswithrain = '1';
 $mrecorddaysnorain = '19';
 $mrecordhighdew = '19.4';
-$mrecordlowdew = '7.3';
+$mrecordlowdew = '7.0';
 $mrecordhighhum = '98';
 $mrecordlowhum = '39';
 $mrecorddailyrainmonth = '2';
@@ -868,7 +868,7 @@ $mrecordhighdewmonth = '2';
 $mrecordhighdewday = '5';
 $mrecordhighdewyear = '2021';
 $mrecordlowdewmonth = '2';
-$mrecordlowdewday = '2';
+$mrecordlowdewday = '8';
 $mrecordlowdewyear = '2021';
 $mrecordhighhummonth = '2';
 $mrecordhighhumday = '1';
@@ -881,9 +881,9 @@ $mrecordhighsolar = '1552.0';
 $mrecordhighsolarmonth = '2';
 $mrecordhighsolarday = '3';
 $mrecordhighsolaryear = '2021';
-$mrecordhighuv = '16.7';
+$mrecordhighuv = '17.2';
 $mrecordhighuvmonth = '2';
-$mrecordhighuvday = '2';
+$mrecordhighuvday = '14';
 $mrecordhighuvyear = '2021';
 // end of eastmasonville wxrecord.php tags
 // ----------------------------------------------------------------------------------------------------
@@ -891,82 +891,82 @@ $mrecordhighuvyear = '2021';
 $vpissstatus = 'Ok';      // VP ISS Status
 $vpreception2 = '%vpreception2%'; // VP Current reception %  *** NEW IN V1.01
 $vpconsolebattery = '%vpconsolebattery%'; // VP Console Battery Volts *** NEW IN V1.01
-$firewi = '9.5'; // Fire Weather Index
-$avtempweek = '16.9';    // Average Weekly Temp
-$hddday = '1.1';        // Heating Degree for day
-$hddmonth = '11.9';    // Heating Degree for month to date
-$hddyear = '70.8';    // Heating Degree for year to date
-$cddday = '0.0';        // Cooling Degree for day
-$cddmonth = '5.4';    // Cooling Degree for month to date
-$cddyear = '43.3';    // Cooling Degree for year to date
-$minchillweek = '10.6';  // Minimum Wind Chill over past 7 days 
-$maxheatweek = '28.1';  // Maximum Heat Index for the Week *** NEW IN V2.00
-$airdensity = '1.18';  //air density
+$firewi = '10.1'; // Fire Weather Index
+$avtempweek = '18.6';    // Average Weekly Temp
+$hddday = '0.0';        // Heating Degree for day
+$hddmonth = '32.1';    // Heating Degree for month to date
+$hddyear = '91.0';    // Heating Degree for year to date
+$cddday = '0.5';        // Cooling Degree for day
+$cddmonth = '19.2';    // Cooling Degree for month to date
+$cddyear = '57.2';    // Cooling Degree for year to date
+$minchillweek = '9.8';  // Minimum Wind Chill over past 7 days 
+$maxheatweek = '30.2';  // Maximum Heat Index for the Week *** NEW IN V2.00
+$airdensity = '1.20';  //air density
 $solarnoon = '13:32'; // Solar noon
-$changeinday = '-00:02:03';  // change in day length since yesterday
-$etcurrentweek = '10.5'; // ET total for the last 7 days
-$sunshinehourstodateday = '00:44';
-$sunshinehourstodatemonth = '11:07';
-$maxsolarfortime = '603';
-$wetbulb = '15.3';
+$changeinday = '-00:02:14';  // change in day length since yesterday
+$etcurrentweek = '19.1'; // ET total for the last 7 days
+$sunshinehourstodateday = '00:14';
+$sunshinehourstodatemonth = '48:11';
+$maxsolarfortime = '613';
+$wetbulb = '16.2';
 $lighteningcountlasthour = '0';
 $lighteningcountlastminute = '0';
 $lighteningcountlast5minutes = '0';
-$lighteningcountlast12hour = '4';
+$lighteningcountlast12hour = '0';
 $lighteningcountlast30minutes = '0';
 $lighteningcountlasttime = '09:51:15 2021/05/02';
 $lighteningcountmonth = '4';
 $lighteningcountyear = '559';
-$chandler = '13.7';
+$chandler = '20.6';
 $maxdew = '16.0';
-$maxdewt = '12:33 AM';
-$mindew = '8.6';
-$mindewt = '5:40 AM';
-$maxdewyest = '19.4';
-$maxdewyestt = '4:09 PM';
-$mindewyest = '12.7';
-$mindewyestt = '1:34 AM';
+$maxdewt = '1:32 AM';
+$mindew = '10.2';
+$mindewt = '8:09 AM';
+$maxdewyest = '17.5';
+$maxdewyestt = '5:32 PM';
+$mindewyest = '14.2';
+$mindewyestt = '3:25 PM';
 $stationname = 'IMELBO2077';
 $raindifffromav = '---';
-$raindifffromavyear = '118.2';
-$gddmonth = '38.3';
-$gddyear = '293.7';
-$maxheat = '20.6';
-$maxheatt = '4:55 PM'; 
-$maxheatyest = '25.6';  
+$raindifffromavyear = '129.2';
+$gddmonth = '134.4';
+$gddyear = '389.7';
+$maxheat = '22.6';
+$maxheatt = '9:54 AM'; 
+$maxheatyest = '30.0';  
 $yeartodateavtemp = '17.6'; 
-$monthtodateavtemp = '17.3'; 
-$maxchillyest = '25.6'; 
-$monthtodatemaxgust = '33.3'; 
-$monthtodateavspeed = '2.3'; // MTD average wind speed
-$monthtodateavgust = '5.8'; //MTD average wind gust
+$monthtodateavtemp = '17.6'; 
+$maxchillyest = '30.2'; 
+$monthtodatemaxgust = '35.2'; 
+$monthtodateavspeed = '2.2'; // MTD average wind speed
+$monthtodateavgust = '5.3'; //MTD average wind gust
 $yeartodateavwind = '2.0'; // YTD average wind speed
-$yeartodategstwind = '4.9'; // YTD avg wind gust
-$lowbaro = '996.0 ';
-$lowbarot = '4:30 AM';
-$monthtodatemaxbaro = '1018.6'; // MTD average wind speed
+$yeartodategstwind = '5.0'; // YTD avg wind gust
+$lowbaro = '1019.8 ';
+$lowbarot = '2:34 AM';
+$monthtodatemaxbaro = '1022.4'; // MTD average wind speed
 $monthtodateminbaro = '995.3'; //MTD average wind gust
-$sunshinehourstodateyear = '42:26'; 
-$sunshineyesterday = '01:01';
-$avtempsincemidnight = '17.5';
-$yesterdayavtemp = '21.8';
-$avgspeedsincereset = '3.1';
-$maxheatyestt = '12:44 PM';
-$windrunyesterday = '95.28';
-$currentwdet = '2.2';
-$yesterdaywdet = '2.4';
-$highhum = '96';
-$highhumt = '1:06 AM';
-$lowhum = '55';
-$lowhumt = '5:18 PM';
-$maxhumyest = '94';
-$maxhumyestt = '11:33 PM';
-$minhumyest = '47';
-$minhumyestt = '1:45 AM';
+$sunshinehourstodateyear = '79:30'; 
+$sunshineyesterday = '06:04';
+$avtempsincemidnight = '19.7';
+$yesterdayavtemp = '21.9';
+$avgspeedsincereset = '3.5';
+$maxheatyestt = '3:43 PM';
+$windrunyesterday = '34.50';
+$currentwdet = '1.0';
+$yesterdaywdet = '4.4';
+$highhum = '90';
+$highhumt = '3:12 AM';
+$lowhum = '49';
+$lowhumt = '9:37 AM';
+$maxhumyest = '80';
+$maxhumyestt = '9:12 AM';
+$minhumyest = '39';
+$minhumyestt = '3:07 PM';
 $recordhightempjan = '36.4';
 $recordlowtempjan = '7.8';
-$recordhightempfeb = '25.6';
-$recordlowtempfeb = '11.3';
+$recordhightempfeb = '30.2';
+$recordlowtempfeb = '9.5';
 $recordhightempmar = '---';
 $recordlowtempmar = '---';
 $recordhightempapr = '---';
@@ -991,7 +991,7 @@ $recordlowtempdec = '7.0';
 // average temp and rain by month (V1.08 addition)
 
 $avtempjannow = '17.6';
-$avtempfebnow = '17.3';
+$avtempfebnow = '17.6';
 $avtempmarnow = '0.0';
 $avtempaprnow = '0.0';
 $avtempmaynow = '0.0';
@@ -1004,16 +1004,16 @@ $avtempnovnow = '0.0';
 $avtempdecnow = '15.0';
 
 $avrainjannow = '116.6';
-$avrainfebnow = '1.6';
-$avrainmarnow = '0.0';
-$avrainaprnow = '0.0';
-$avrainmaynow = '0.0';
-$avrainjunnow = '0.0';
-$avrainjulnow = '0.0';
-$avrainaugnow = '0.0';
-$avrainsepnow = '0.0';
-$avrainoctnow = '0.0';
-$avrainnovnow = '0.0';
+$avrainfebnow = '12.6';
+$avrainmarnow = '---';
+$avrainaprnow = '---';
+$avrainmaynow = '---';
+$avrainjunnow = '---';
+$avrainjulnow = '---';
+$avrainaugnow = '---';
+$avrainsepnow = '---';
+$avrainoctnow = '---';
+$avrainnovnow = '---';
 $avraindecnow = '2.3';
 
 // end of other addons
