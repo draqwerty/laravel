@@ -13,13 +13,13 @@ class Menu extends Model
 
     public function parent()
     {
-        return $this->hasOne('App\Models\Menu', 'id', 'parent_id')->orderBy('sort_order');
+        return $this->hasOne('App\Models\Menu', 'id', 'parent_id')->where('active', '=', '1')->orderBy('sort_order');
     }
 
     public function children()
     {
 
-        return $this->hasMany('App\Models\Menu', 'parent_id', 'id')->orderBy('sort_order');
+        return $this->hasMany('App\Models\Menu', 'parent_id', 'id')->where('active', '=', '1')->orderBy('sort_order');
     }
 
     public static function tree()

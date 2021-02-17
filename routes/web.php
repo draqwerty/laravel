@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ReportsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,38 +24,65 @@ Auth::routes();
 //Route::get('/', 'App\Http\Controllers\MenuController@getMenu');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', 'App\Http\Controllers\PagesController@index');
-
-Route::get('/wf', 'App\Http\Controllers\PagesController@getWF');
-
-Route::get('current', 'App\Http\Controllers\PagesController@current');
-
-Route::get('/graphs/mtd', 'App\Http\Controllers\PagesController@graphMtd');
-Route::get('/graphs/current', 'App\Http\Controllers\PagesController@graphCurrent');
-Route::get('/graphs/last', 'App\Http\Controllers\PagesController@graphLast');
-
-Route::get('/moon', 'App\Http\Controllers\PagesController@moon');
-
-Route::get('/records/all', 'App\Http\Controllers\PagesController@recordsAll');
-Route::get('/records/month', 'App\Http\Controllers\PagesController@recordsMonth');
-Route::get('/records/year', 'App\Http\Controllers\PagesController@recordsYear');
-Route::get('/records/2021', 'App\Http\Controllers\PagesController@records2021');
-
-Route::get('/wdlive', 'App\Http\Controllers\PagesController@wdLive');
+Route::prefix('admin')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
 
 
-Route::get('/reports/aveext/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsAveExtremeMonth');
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/wf', [PagesController::class, 'getWF']);
+Route::get('current', [PagesController::class, 'current']);
+Route::get('/moon', [PagesController::class, 'moon']);
+Route::get('/wdlive', [PagesController::class, 'wdLive']);
 
-Route::get('/reports/dailylog', 'App\Http\Controllers\ReportsController@reportsDailyLog');
-Route::get('/reports/daily', 'App\Http\Controllers\ReportsController@reportsDaily');
-Route::get('/reports/weatherdata', 'App\Http\Controllers\ReportsController@reportsWeatherData');
 
-Route::get('/reports/climatedata/currentyear', 'App\Http\Controllers\ReportsController@reportsClimateCurrentYear');
-Route::get('/reports/climatedata/currentmonth', 'App\Http\Controllers\ReportsController@reportsClimateCurrentMonth');
-Route::get('/reports/climatedata/history/{year}', 'App\Http\Controllers\ReportsController@reportsClimateYear');
-Route::get('/reports/climatedata/history/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsClimateMonth');
+Route::prefix('graphs')->group(function () {
+    Route::get('mtd', [PagesController::class, 'graphMtd']);
+    Route::get('current', [PagesController::class, 'graphCurrent']);
+    Route::get('last', [PagesController::class, 'graphLast']);
+    Route::get('daily/{year}/{week}', [PagesController::class, 'graphDaily']);
+});
 
-Route::get('/reports/noaa/currentyear', 'App\Http\Controllers\ReportsController@reportsNoaaCurrentYear');
-Route::get('/reports/noaa/currentmonth', 'App\Http\Controllers\ReportsController@reportsNoaaCurrentMonth');
-Route::get('/reports/noaa/history/{year}', 'App\Http\Controllers\ReportsController@reportsNoaaYear');
-Route::get('/reports/noaa/history/{year}/{month}', 'App\Http\Controllers\ReportsController@reportsNoaaMonth');
+
+Route::prefix('records')->group(function() {
+    Route::get('all', 'App\Http\Controllers\PagesController@recordsAll');
+    Route::get('month', 'App\Http\Controllers\PagesController@recordsMonth');
+    Route::get('year', 'App\Http\Controllers\PagesController@recordsYear');
+    Route::get('2021', 'App\Http\Controllers\PagesController@records2021');
+});
+
+
+Route::prefix('reports')->group(function() {
+    //reports
+    Route::get('dailylog', [ReportsController::class, 'reportsDailyLog']);
+    Route::get('daily', [ReportsController::class, '@reportsDaily']);
+    Route::get('weatherdata', [ReportsController::class, 'reportsWeatherData']);
+
+    Route::get('aveext/{year}/{month}', [ReportsController::class, 'reportsAveExtremeMonth']);
+
+    Route::prefix('climatedata')->group(function() {
+        //reports/climatedata
+        Route::get('currentyear', [ReportsController::class, 'reportsClimateCurrentYear']);
+        Route::get('currentmonth', [ReportsController::class, 'reportsClimateCurrentMonth']);
+
+        Route::prefix('history')->group(function() {
+            //reports/climatedata/history
+            Route::get('{year}', [ReportsController::class, 'reportsClimateYear']);
+            Route::get('{year}/{month}', [ReportsController::class, 'reportsClimateMonth']);
+        });
+    });
+
+    Route::prefix('noaa')->group(function() {
+        //reports/noaa
+        Route::get('currentyear', [ReportsController::class, 'reportsNoaaCurrentYear']);
+        Route::get('currentmonth', [ReportsController::class, 'reportsNoaaCurrentMonth']);
+
+        Route::prefix('history')->group(function() {
+            //reports/noaa/history
+            Route::get('{year}', [ReportsController::class, 'reportsNoaaYear']);
+            Route::get('{year}/{month}', [ReportsController::class, 'reportsNoaaMonth']);
+        });
+    });
+});

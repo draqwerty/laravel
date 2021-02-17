@@ -197,6 +197,21 @@ class PagesController extends Controller
                                        ->with('menulist', $menuList);
     }
 
+    public function graphDaily(CurrentRepository $current, $year, $week)
+    {
+        $day = substr($week, 6, 2);
+        $month = substr($week, 4, 2);
+
+        $title = 'daily graphs for week starting '.$day.'/'.$month.' of '.$year;
+
+        $menuList = (new MenuController)->getMenu();
+
+        $currentlist = $current->getCurrentList();
+
+        return view('pages.graph.daily')->with(compact('currentlist','title','day','month','year'))
+                                       ->with('menulist', $menuList);
+    }
+
     public function moon(CurrentRepository $current)
     {
         $title = 'moon details';
