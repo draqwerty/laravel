@@ -65,7 +65,7 @@ Route::prefix('/reports')->group(function() {
     //Route::get('weatherdata', [ReportsController::class, 'reportsWeatherData']);
 
     Route::get('weatherdata', function () {
-        return redirect('/wdisplay');
+        return redirect('/wdisplay/IMELBO2077.htm');
     });
 
     Route::get('aveext/{year}/{month}', [ReportsController::class, 'reportsAveExtremeMonth']);
