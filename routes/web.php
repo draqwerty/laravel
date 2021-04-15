@@ -33,12 +33,16 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/wf', [PagesController::class, 'getWF']);
-Route::get('current', [PagesController::class, 'current']);
+Route::get('/fire', [PagesController::class, 'nrFire']);
+Route::get('/current', [PagesController::class, 'current']);
 Route::get('/moon', [PagesController::class, 'moon']);
 Route::get('/wdlive', [PagesController::class, 'wdLive']);
 
 
-Route::prefix('graphs')->group(function () {
+
+
+
+Route::prefix('/graphs')->group(function () {
     Route::get('mtd', [PagesController::class, 'graphMtd']);
     Route::get('current', [PagesController::class, 'graphCurrent']);
     Route::get('last', [PagesController::class, 'graphLast']);
@@ -46,7 +50,7 @@ Route::prefix('graphs')->group(function () {
 });
 
 
-Route::prefix('records')->group(function() {
+Route::prefix('/records')->group(function() {
     Route::get('all', 'App\Http\Controllers\PagesController@recordsAll');
     Route::get('month', 'App\Http\Controllers\PagesController@recordsMonth');
     Route::get('year', 'App\Http\Controllers\PagesController@recordsYear');
@@ -54,11 +58,15 @@ Route::prefix('records')->group(function() {
 });
 
 
-Route::prefix('reports')->group(function() {
+Route::prefix('/reports')->group(function() {
     //reports
     Route::get('dailylog', [ReportsController::class, 'reportsDailyLog']);
-    Route::get('daily', [ReportsController::class, '@reportsDaily']);
-    Route::get('weatherdata', [ReportsController::class, 'reportsWeatherData']);
+    Route::get('daily', [ReportsController::class, 'reportsDaily']);
+    //Route::get('weatherdata', [ReportsController::class, 'reportsWeatherData']);
+
+    Route::get('weatherdata', function () {
+        return redirect('/wdisplay');
+    });
 
     Route::get('aveext/{year}/{month}', [ReportsController::class, 'reportsAveExtremeMonth']);
 

@@ -284,5 +284,26 @@ class PagesController extends Controller
                                    ->with('menulist', $menuList);
     }
 
+    public function nrFire(CurrentRepository $current)
+    {
+        include('/var/www/html/current/public/wdisplay/fire.php');
+
+        $title = 'fire ban and restriction status for current';
+
+        $fire = array(
+            'today' => $today,
+            'tomorrow' => $tomorrow,
+            'firerestriction' => $firerestriction,
+        );
+
+        $menuList = (new MenuController)->getMenu();
+
+        $currentlist = $current->getCurrentList();
+
+        return view('pages.fire')->with($fire)
+                                 ->with(compact('currentlist','title'))
+                                 ->with('menulist', $menuList);
+    }
+
 
 }

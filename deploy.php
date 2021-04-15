@@ -36,7 +36,8 @@ add('rsync', [
         '/node_modules/',
         '.github',
         'deploy.php',
-        '/public/wdisplay'
+        '/public/wdisplay',
+        '/public/cumulusmx',
     ],
 ]);
 
@@ -60,6 +61,10 @@ task('build', function () {
 
 task('wdisplay', function () {
     run('ln -nfs --relative /var/www/html/wdisplay {{release_path}}/public/wdisplay');
+});
+
+task('cumulusmx', function () {
+    run('ln -nfs --relative /var/www/html/cumulusmx {{release_path}}/public/cumulusmx');
 });
 
 task('deploy:secrets', function () {
@@ -92,6 +97,7 @@ task('deploy', [
     //'artisan:queue:restart',
     'deploy:symlink',
     'wdisplay',
+    'cumulusmx',
     'deploy:unlock',
     'cleanup',
 ]);

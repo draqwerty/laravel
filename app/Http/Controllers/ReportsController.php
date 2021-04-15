@@ -227,7 +227,8 @@ class ReportsController extends Controller
     public function reportsWeatherData(CurrentRepository $current)
     {
         $title = 'daily report';
-        $filename = config('app.name','MEL').'.htm';
+        //custom weatherdata file to allow images to be displayed.
+        $filename = 'wx.html';
 
         $menuList = (new MenuController)->getMenu();
 

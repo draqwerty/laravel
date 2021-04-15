@@ -65,6 +65,71 @@
 
     </div>
 
+    <div class="shadow p-3 mb-5 bg-white rounded px-5">
+        <h2>fire</h2>
+
+        @switch($fire['today'])
+            @case('LOW-MODERATE')
+                <img src="/images/low-moderate.png" />
+                @break
+
+            @case('HIGH')
+                <img src="/images/high.png" />
+                @break
+
+            @case('VERY HIGH')
+                <img src="/images/very-high.png" />
+                @break
+
+            @case('EXTREME')
+                <img src="/images/extreme.png" />
+                @break
+
+            @case('SEVERE')
+                <img src="/images/severe.png" />
+                @break
+
+            @case('CATASTROPHIC')
+                <img src="/images/catastrophic.png" />
+                @break
+
+            @default
+                <h2>no fire level for today</h2>
+        @endswitch
+
+        @switch($fire['tomorrow'])
+            @case('LOW-MODERATE')
+                <img src="/images/low-moderate.png" />
+                @break
+
+            @case('HIGH')
+                <img src="/images/high.png" />
+                @break
+
+            @case('VERY HIGH')
+                <img src="/images/very-high.png" />
+                @break
+
+            @case('EXTREME')
+                <img src="/images/extreme.png" />
+                @break
+
+            @case('SEVERE')
+                <img src="/images/severe.png" />
+                @break
+
+            @case('CATASTROPHIC')
+                <img src="/images/catastrophic.png" />
+                @break
+
+            @default
+                <h2>no fire level for today</h2>
+        @endswitch
+
+            <h2>{{ $fire['firerestriction']}}
+    </div>
+
+    
 <div class="shadow p-3 mb-5 bg-white rounded px-5">
     <h2>forecast</h2>
 
