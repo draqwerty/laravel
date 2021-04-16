@@ -59,138 +59,259 @@
                 <td>burn time: {{ $currentlist['burntime'] }} minutes</td>
                 <td>next update: {{ $currentlist['timeofnextupdate'] }}</td>
             </tr>
-
-
         </table>
-
     </div>
 
-    <div class="shadow p-3 mb-5 bg-white rounded px-5">
-        <h2>fire</h2>
 
-        @switch($fire['today'])
-            @case('LOW-MODERATE')
-                <img src="/images/low-moderate.png" />
-                @break
+    @if($fire['tomorrow1'] === "NA" || $fire['tomorrow2'] === "NA")
 
-            @case('HIGH')
-                <img src="/images/high.png" />
-                @break
+        <div class="h-auto w-75 mx-auto shadow p-3 mb-5 bg-white rounded px-5">
 
-            @case('VERY HIGH')
-                <img src="/images/very-high.png" />
-                @break
+    @else
 
-            @case('EXTREME')
-                <img src="/images/extreme.png" />
-                @break
+        <div class="h-auto w-100 shadow p-3 mb-5 bg-white rounded px-5">
 
-            @case('SEVERE')
-                <img src="/images/severe.png" />
-                @break
+    @endif
 
-            @case('CATASTROPHIC')
-                <img src="/images/catastrophic.png" />
-                @break
-
-            @default
-                <h2>no fire level for today</h2>
-        @endswitch
-
-        @switch($fire['tomorrow'])
-            @case('LOW-MODERATE')
-                <img src="/images/low-moderate.png" />
-                @break
-
-            @case('HIGH')
-                <img src="/images/high.png" />
-                @break
-
-            @case('VERY HIGH')
-                <img src="/images/very-high.png" />
-                @break
-
-            @case('EXTREME')
-                <img src="/images/extreme.png" />
-                @break
-
-            @case('SEVERE')
-                <img src="/images/severe.png" />
-                @break
-
-            @case('CATASTROPHIC')
-                <img src="/images/catastrophic.png" />
-                @break
-
-            @default
-                <h2>no fire level for today</h2>
-        @endswitch
-
-            <h2>{{ $fire['firerestriction']}}
-    </div>
-
-    
-<div class="shadow p-3 mb-5 bg-white rounded px-5">
-    <h2>forecast</h2>
-
-    <table class="table table-sm table-hover">
-        <thead class="thead-light">
-            <tr>
-                <th>date</th>
-                <th>condition</th>
-                <th>max</th>
-                <th>min</th>
-                <th>rain probability</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @for ($i = 0; $i < 10; $i++)
-                <?php
-                    $day_num = 'day_num'.$i;
-                    $month_num = 'month_num'.$i;
-                    $conditions = 'conditions'.$i;
-                    $air_temp_high = 'air_temp_high'.$i;
-                    $air_temp_low = 'air_temp_low'.$i;
-                    $precip_probability = 'precip_probability'.$i;
-                ?>
-                <tr>
-                    <th>{{ $$day_num }}/{{ $$month_num }}</td>
-                    <td>{{ $$conditions }}</td>
-                    <td>{{ $$air_temp_high }}</td>
-                    <td>{{ $$air_temp_low }}</td>
-                    <td>{{ $$precip_probability }}</td>
-                </tr>
-            @endfor
-        </tbody>
-    </table>
-</div>
+    <h2>fire status</h2>
+    <br />
 
 
+    <div class="row justify-content-md-center">
+        <div class="col">
 
-<div class="shadow p-3 mb-5 bg-white rounded px-5">
-    <h2>last 7 days comparison</h2>
-</div>
+            <h3 class="text-center">today</h3>
 
-<div class="shadow p-3 mb-5 bg-white rounded">
-    <h2>rain radar</h2>
+            @switch($fire['today'])
 
-        @if ($agent->isMobile())
-            <div class="modal-body" id="modal-body">
-                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-37.930&lon=145.358&detailLat=-37.917&detailLon=145.356&width=419&height=420&zoom=10&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                @case('LOW-MODERATE')
+                    <img src="/images/low-moderate.png" class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('HIGH')
+                    <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('VERY HIGH')
+                    <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('EXTREME')
+                    <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('SEVERE')
+                    <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('CATASTROPHIC')
+                    <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @default
+                    <h5 class="text-center">no information available</h5>
+                    @break
+
+            @endswitch
+        </div>
+
+        @if($fire['tomorrow1'] === "NA" && $fire['tomorrow2'] === "NA")
+
+            <div class="col col-lg-2">
             </div>
-            <div class="modal-body" id="modal-body">
-                <iframe width="98%" height="420" src="https://embed.windy.com/embed2.html?lat=-27.376&lon=135.794&detailLat=-27.145&detailLon=133.877&width=419&height=420&zoom=3&level=surface&overlay=rain&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-            </div>
-        @else
-            <div class="modal-body" id="modal-body">
-                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-37.930&lon=145.358&detailLat=-37.917&detailLon=145.356&width=640&height=640&zoom=10&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
-                <iframe width="48%" height="640" src="https://embed.windy.com/embed2.html?lat=-25.635&lon=134.140&detailLat=-37.900&detailLon=145.350&width=640&height=640&zoom=4&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+
+        @endif
+
+        <div class="col">
+
+            <h3 class="text-center">tomorrow</h3>
+
+            @switch($fire['tomorrow'])
+
+                @case('LOW-MODERATE')
+                    <img src="/images/low-moderate.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('HIGH')
+                    <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('VERY HIGH')
+                    <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('EXTREME')
+                    <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('SEVERE')
+                    <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @case('CATASTROPHIC')
+                    <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                    @break
+
+                @default
+                    <h5 class="text-center">no information available</h5>
+                    @break
+
+            @endswitch
+        </div>
+
+        @if($fire['tomorrow1'] != "NA")
+            <div class="col">
+
+                <h3 class="text-center">tomorrow+1</h3>
+
+                @switch($fire['tomorrow1'])
+
+                    @case('LOW-MODERATE')
+                        <img src="/images/low-moderate.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('HIGH')
+                        <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('VERY HIGH')
+                        <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('EXTREME')
+                        <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('SEVERE')
+                        <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('CATASTROPHIC')
+                        <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                @endswitch
             </div>
         @endif
-</div>
-    <code></code>
-</div>
+
+
+        @if($fire['tomorrow2'] != "NA")
+            <div class="col">
+
+                <h3 class="text-center">tomorrow+2</h3>
+
+                @switch($fire['tomorrow2'])
+
+                    @case('LOW-MODERATE')
+                        <img src="/images/low-moderate.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('HIGH')
+                        <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('VERY HIGH')
+                        <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('EXTREME')
+                        <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('SEVERE')
+                        <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('CATASTROPHIC')
+                        <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                @endswitch
+            </div>
+        @endif
+
+        @if($fire['tomorrow3'] != "NA")
+            <div class="col">
+
+                <h3 class="text-center">tomorrow+3</h3>
+
+                @switch($fire['tomorrow3'])
+
+                    @case('LOW-MODERATE')
+                        <img src="/images/low-moderate.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('HIGH')
+                        <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('VERY HIGH')
+                        <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('EXTREME')
+                        <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('SEVERE')
+                        <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('CATASTROPHIC')
+                        <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                @endswitch
+            </div>
+        @endif
+
+
+
+        @if($fire['tomorrow4'] != "NA")
+            <div class="col">
+
+                <h3 class="text-center">tomorrow+4</h3>
+
+                @switch($fire['tomorrow4'])
+
+                    @case('LOW-MODERATE')
+                        <img src="/images/low-moderate.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('HIGH')
+                        <img src="/images/high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('VERY HIGH')
+                        <img src="/images/very-high.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('EXTREME')
+                        <img src="/images/extreme.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('SEVERE')
+                        <img src="/images/severe.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                    @case('CATASTROPHIC')
+                        <img src="/images/catastrophic.png"  class="w-100 rounded img-fluid img-thumbnail"/>
+                        @break
+
+                @endswitch
+            </div>
+        @endif
+    </div>
+    </div>
+
+    <div class="h-auto w-75 mx-auto shadow p-3 mb-5 bg-white rounded px-5">
+        <h2>fire restrictions</h2>
+
+        <br />
+        <h4 class="text-left"><strong>Yarra Ranges:</strong>  <small class="text-muted">{{ $fire['firerestriction'] }}</small></h4>
+
+    </div>
+
 
 
 

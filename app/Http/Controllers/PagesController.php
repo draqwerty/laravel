@@ -293,6 +293,10 @@ class PagesController extends Controller
         $fire = array(
             'today' => $today,
             'tomorrow' => $tomorrow,
+            'tomorrow1' => $tomorrow1,
+            'tomorrow2' => $tomorrow2,
+            'tomorrow3' => $tomorrow3,
+            'tomorrow4' => $tomorrow4,
             'firerestriction' => $firerestriction,
         );
 
@@ -300,7 +304,7 @@ class PagesController extends Controller
 
         $currentlist = $current->getCurrentList();
 
-        return view('pages.fire')->with($fire)
+        return view('pages.fire')->with('fire', $fire)
                                  ->with(compact('currentlist','title'))
                                  ->with('menulist', $menuList);
     }
