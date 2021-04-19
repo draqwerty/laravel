@@ -1,8 +1,2 @@
 <?php
-$today = "LOW-MODERATE";
-$tomorrow = "LOW-MODERATE";
-$tomorrow1 = "LOW-MODERATE";
-$tomorrow2 = "NA";
-$tomorrow3 = "NA";
-$tomorrow4 = "NA";
-$firerestriction = "No restrictions in force - Restrictions: 08/02/2021 - 22/03/2021";?>
+$today = "LOW-MODERATE";$todaytime = "Today, Mon, 19 Apr 2021";$tomorrow = "LOW-MODERATE";$tomorrowtime = "Tomorrow, Tue, 20 Apr 2021";$tomorrow1 = "LOW-MODERATE";$tomorrow1time = "Wed, 21 Apr 2021";$tomorrow2 = "LOW-MODERATE";$tomorrow2time = "Thu, 22 Apr 2021";$tomorrow3 = "NA";$tomorrow3time = "NA";$tomorrow4 = "NA";$tomorrow4time = "NA";$firerestriction = "No restrictions in force - Restrictions: 08/02/2021 - 22/03/2021";?>

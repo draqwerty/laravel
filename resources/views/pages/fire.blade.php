@@ -80,7 +80,7 @@
     <div class="row justify-content-md-center">
         <div class="col">
 
-            <h3 class="text-center">today</h3>
+            <h4 class="text-center">{{ $fire['todaytime'] }}</h4>
 
             @switch($fire['today'])
 
@@ -124,7 +124,7 @@
 
         <div class="col">
 
-            <h3 class="text-center">tomorrow</h3>
+            <h4 class="text-center">{{ $fire['tomorrowtime'] }}</h4>
 
             @switch($fire['tomorrow'])
 
@@ -162,7 +162,7 @@
         @if($fire['tomorrow1'] != "NA")
             <div class="col">
 
-                <h3 class="text-center">tomorrow+1</h3>
+                <h4 class="text-center">{{ $fire['tomorrow1time'] }}</h4>
 
                 @switch($fire['tomorrow1'])
 
@@ -198,7 +198,7 @@
         @if($fire['tomorrow2'] != "NA")
             <div class="col">
 
-                <h3 class="text-center">tomorrow+2</h3>
+                <h4 class="text-center">{{ $fire['tomorrow2time'] }}</h4>
 
                 @switch($fire['tomorrow2'])
 
@@ -233,7 +233,7 @@
         @if($fire['tomorrow3'] != "NA")
             <div class="col">
 
-                <h3 class="text-center">tomorrow+3</h3>
+                <h4 class="text-center">{{ $fire['tomorrow3time'] }}</h4>
 
                 @switch($fire['tomorrow3'])
 
@@ -270,7 +270,7 @@
         @if($fire['tomorrow4'] != "NA")
             <div class="col">
 
-                <h3 class="text-center">tomorrow+4</h3>
+                <h4 class="text-center">{{ $fire['tomorrow4time'] }}</h4>
 
                 @switch($fire['tomorrow4'])
 

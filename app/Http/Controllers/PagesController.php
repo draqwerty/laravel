@@ -292,11 +292,17 @@ class PagesController extends Controller
 
         $fire = array(
             'today' => $today,
+            'todaytime' => $todaytime,
             'tomorrow' => $tomorrow,
+            'tomorrowtime' => $tomorrowtime,
             'tomorrow1' => $tomorrow1,
+            'tomorrow1time' => $tomorrow1time,
             'tomorrow2' => $tomorrow2,
+            'tomorrow2time' => $tomorrow2time,
             'tomorrow3' => $tomorrow3,
+            'tomorrow3time' => $tomorrow3time,
             'tomorrow4' => $tomorrow4,
+            'tomorrow4time' => $tomorrow4time,
             'firerestriction' => $firerestriction,
         );
 
